@@ -1,0 +1,2387 @@
+/*==================================================
+                GLOBAL SETTINGS
+==================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f5f5;
+    color:#333;
+    overflow-x:hidden;
+}
+
+/*==================================================
+                    HEADER
+==================================================*/
+
+header{
+
+    width:100%;
+
+    min-height:120px;
+
+    background:#222;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 5%;
+
+}
+
+#img_header{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+header #title{
+
+    color:white;
+
+    font-size:2rem;
+
+    text-align:center;
+
+    flex:1;
+
+    font-weight:bold;
+
+}
+
+/*==================================================
+                    NAVBAR
+==================================================*/
+
+nav{
+
+    width:100%;
+
+    background:#c62828;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    justify-content:center;
+
+    list-style:none;
+
+}
+
+nav ul li{
+
+    position:relative;
+
+}
+
+nav ul li a{
+
+    display:block;
+
+    padding:18px 30px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+    background:white;
+
+    color:#c62828;
+
+}
+
+/*================ DROPDOWN =================*/
+
+nav ul li ul{
+
+    position:absolute;
+
+    left:0;
+
+    top:100%;
+
+    width:240px;
+
+    background:#c62828;
+
+    display:none;
+
+    flex-direction:column;
+
+}
+
+nav ul li:hover ul{
+
+    display:flex;
+
+}
+
+nav ul li ul li{
+
+    width:100%;
+
+}
+
+nav ul li ul li a{
+
+    padding:15px;
+
+    border-bottom:1px solid rgba(255,255,255,.2);
+
+}
+
+/*==================================================
+                    FOOTER
+==================================================*/
+
+footer{
+
+    width:100%;
+
+    background:#222;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+    margin-top:50px;
+
+}
+
+footer h1{
+
+    font-size:1.5rem;
+
+    font-weight:normal;
+
+}
+/*==========================================
+            HOME PAGE
+==========================================*/
+
+.body_home{
+
+    width:90%;
+
+    margin:40px auto;
+
+}
+
+/*========== Slider ==========*/
+
+#img_1{
+
+    width:100%;
+
+    height:550px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+}
+
+#h2_1{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    font-size:35px;
+
+    color:#c62828;
+
+}
+
+#h1_1{
+
+    text-align:center;
+
+    margin-top:10px;
+
+    color:#666;
+
+}
+
+/*========== Slider Buttons ==========*/
+
+.prev,
+.next{
+
+    width:60px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#c62828;
+
+    color:white;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    margin:25px 10px;
+
+}
+
+.prev:hover,
+.next:hover{
+
+    background:#222;
+
+    transform:scale(1.1);
+
+}
+
+/*========== Cards ==========*/
+
+.body_home table{
+
+    width:100%;
+
+    border-spacing:30px;
+
+    margin-top:50px;
+
+}
+
+.body_home article{
+
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+    transition:0.3s;
+
+}
+
+.body_home article:hover{
+
+    transform:translateY(-30px);
+
+}
+
+.body_home article img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+}
+
+.body_home article p{
+
+    padding:20px;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    text-align:justify;
+
+}
+/*==========================================
+          HOME RESPONSIVE
+==========================================*/
+
+@media(max-width:992px){
+
+.body_home table,
+.body_home tr,
+.body_home td{
+
+    display:block;
+
+    width:100%;
+
+}
+
+.body_home td{
+
+    margin-bottom:30px;
+
+}
+
+#img_1{
+
+    height:400px;
+
+}
+
+#h2_1{
+
+    font-size:28px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+header{
+
+    flex-direction:column;
+
+}
+
+header #title{
+
+    margin-top:15px;
+
+    font-size:28px;
+
+}
+
+nav ul{
+
+    flex-direction:column;
+
+}
+
+nav ul li{
+
+    width:100%;
+
+}
+
+nav ul li a{
+
+    text-align:center;
+
+}
+
+nav ul li ul{
+
+    position:static;
+
+    width:100%;
+
+}
+
+#img_1{
+
+    height:250px;
+
+}
+
+#h2_1{
+
+    font-size:22px;
+
+}
+
+.prev,
+.next{
+
+    width:45px;
+
+    height:45px;
+
+    font-size:22px;
+
+}
+
+.body_home article img{
+
+    height:220px;
+
+}
+
+.body_home article p{
+
+    font-size:16px;
+
+}
+
+}
+/*==========================================
+                MENU PAGE
+==========================================*/
+
+.body_menu{
+
+    width:90%;
+
+    margin:50px auto;
+
+}
+
+.body_menu table{
+
+    width:100%;
+
+    border-spacing:30px;
+
+}
+
+.body_menu article{
+
+    margin-top: 30px;
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+    transition: 0.3s;
+
+    text-align:center;
+
+}
+
+.body_menu article:hover{
+
+    transform:translateY(-30px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.25);
+
+}
+
+.body_menu article img{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+
+}
+
+#name_title,
+#rating_title,
+#price_title{
+
+    display:inline-block;
+
+    color:#c62828;
+
+    margin-top:15px;
+
+    font-size:22px;
+
+}
+
+#name,
+#rating,
+#price{
+
+    display:inline-block;
+
+    color:#333;
+
+    font-size:22px;
+
+    margin-left:8px;
+
+}
+
+#description{
+
+    width:90%;
+
+    margin:20px auto;
+
+    line-height:1.7;
+
+    font-size:17px;
+
+    color:#555;
+
+}
+
+#order_now{
+
+    margin:20px 0 30px;
+
+    padding:14px 35px;
+
+    background:#c62828;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#order_now:hover{
+
+    background:#222;
+
+    transform:scale(1.05);
+
+}
+/*==========================================
+            MENU RESPONSIVE
+==========================================*/
+
+@media(max-width:992px){
+
+.body_menu table,
+.body_menu tr,
+.body_menu td{
+
+    display:block;
+
+    width:100%;
+
+}
+
+.body_menu td{
+
+    margin-bottom:35px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.body_menu article img{
+
+    height:220px;
+
+}
+
+#name_title,
+#rating_title,
+#price_title{
+
+    font-size:18px;
+
+}
+
+#name,
+#rating,
+#price{
+
+    font-size:18px;
+
+}
+
+#description{
+
+    font-size:15px;
+
+}
+
+#order_now{
+
+    width:85%;
+
+}
+
+}
+/*==========================================
+                CHEFS PAGE
+==========================================*/
+
+.body_chefs{
+
+    width:90%;
+
+    margin:50px auto;
+
+}
+
+.body_chefs table{
+
+    width:100%;
+
+    border-spacing:30px;
+
+}
+
+.body_chefs article{
+
+    margin-top: 30px;
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+    transition:0.3s;
+
+}
+
+.body_chefs article:hover{
+
+    transform:translateY(-30px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.25);
+
+}
+
+.body_chefs article img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+}
+
+#Age_title,
+#experience_title{
+
+    display:inline-block;
+
+    color:#c62828;
+
+    margin-top:12px;
+
+    font-size:21px;
+
+}
+
+#Age,
+#experience{
+
+    display:inline-block;
+
+    margin-left:8px;
+
+    color:#444;
+
+    font-size:21px;
+
+}
+
+.body_chefs #description{
+
+    width:90%;
+
+    margin:20px auto;
+
+    line-height:1.8;
+
+    color:#555;
+
+    font-size:17px;
+
+}
+/*==========================================
+            CHEFS RESPONSIVE
+==========================================*/
+
+@media(max-width:992px){
+
+.body_chefs table,
+.body_chefs tr,
+.body_chefs td{
+
+    display:block;
+
+    width:100%;
+
+}
+
+.body_chefs td{
+
+    margin-bottom:35px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.body_chefs article img{
+
+    height:260px;
+
+}
+
+#Age_title,
+#experience_title{
+
+    font-size:18px;
+
+}
+
+#Age,
+#experience{
+
+    font-size:18px;
+
+}
+
+.body_chefs #description{
+
+    font-size:15px;
+
+}
+
+}
+/*==========================================
+                GALLERY PAGE
+==========================================*/
+
+.body_gallery{
+
+    width:90%;
+
+    margin:50px auto;
+
+}
+
+.body_gallery table{
+
+    width:100%;
+
+    border-spacing:20px;
+
+}
+
+.body_gallery article{
+
+    overflow:hidden;
+
+    border-radius:15px;
+
+    background:white;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+.body_gallery article img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+    cursor:pointer;
+
+    transition:.5s;
+
+}
+
+.body_gallery article img:hover{
+
+    transform:scale(1.12);
+
+}
+/*==========================================
+            GALLERY RESPONSIVE
+==========================================*/
+
+@media(max-width:992px){
+
+.body_gallery table,
+.body_gallery tr,
+.body_gallery td{
+
+    display:block;
+
+    width:100%;
+
+}
+
+.body_gallery td{
+
+    margin-bottom:25px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.body_gallery article img{
+
+    height:220px;
+
+}
+
+}
+/*==========================================
+                CONTACT PAGE
+==========================================*/
+
+.body_contact{
+
+    width:90%;
+
+    margin:50px auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:40px;
+
+    align-items:flex-start;
+
+}
+
+#table,
+#table_2{
+
+    width:48%;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+#title h1,
+#title_2 h1{
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+    color:#c62828;
+
+}
+
+#table h2,
+#table_2 h2{
+
+    margin-top:20px;
+
+    color:#333;
+
+}
+
+#table input,
+#table_2 input{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-top:10px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+#table_2 input:focus{
+
+    outline:none;
+
+    border-color:#c62828;
+
+    box-shadow:0 0 10px rgba(198,40,40,.25);
+
+}
+
+#text_message{
+
+    height:140px;
+
+}
+
+#div_opening{
+
+    margin-top:20px;
+
+    line-height:2;
+
+    font-size:18px;
+
+    color:#444;
+
+}
+
+#send_message{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:15px;
+
+    border:none;
+
+    background:#c62828;
+
+    color:white;
+
+    border-radius:10px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#send_message:hover{
+
+    background:#222;
+
+    transform:translateY(-3px);
+
+}
+/*==========================================
+            CONTACT RESPONSIVE
+==========================================*/
+
+@media(max-width:992px){
+
+.body_contact{
+
+    flex-direction:column;
+
+}
+
+#table,
+#table_2{
+
+    width:100%;
+
+}
+
+}
+
+@media(max-width:768px){
+
+#table,
+#table_2{
+
+    padding:25px;
+
+}
+
+#title h1,
+#title_2 h1{
+
+    font-size:26px;
+
+}
+
+#table h2,
+#table_2 h2{
+
+    font-size:20px;
+
+}
+
+#table input,
+#table_2 input{
+
+    font-size:15px;
+
+}
+
+}
+/*==========================================
+        CRISPY CHICKEN PAGE
+==========================================*/
+
+.body_crispy_Chicken{
+
+    width:80%;
+
+    margin:50px auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.body_crispy_Chicken #title{
+
+    text-align:center;
+
+    color:#c62828;
+
+    font-size:40px;
+
+    margin-bottom:30px;
+
+}
+
+.body_crispy_Chicken img{
+
+    width:100%;
+
+    height:500px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    margin-bottom:30px;
+
+}
+
+.body_crispy_Chicken #About,
+.body_crispy_Chicken #ingredients,
+.body_crispy_Chicken #Preparation_Steps,
+.body_crispy_Chicken #Recipe_Information{
+
+    color:#c62828;
+
+    margin-top:35px;
+
+    margin-bottom:20px;
+
+}
+
+.body_crispy_Chicken #p_about{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#555;
+
+}
+
+.body_crispy_Chicken ul,
+.body_crispy_Chicken ol{
+
+    margin-left:35px;
+
+}
+
+.body_crispy_Chicken li{
+
+    margin-bottom:12px;
+
+}
+
+.body_crispy_Chicken #p_ingredients,
+.body_crispy_Chicken #p_Preparation_Steps{
+
+    font-size:17px;
+
+    color:#444;
+
+}
+
+.body_crispy_Chicken #p_Recipe_Information,
+.body_crispy_Chicken #p_2_Recipe_Information{
+
+    font-size:18px;
+
+    color:#444;
+
+    margin-top:10px;
+
+}
+@media(max-width:768px){
+
+.body_crispy_Chicken{
+
+    width:95%;
+
+    padding:20px;
+
+}
+
+.body_crispy_Chicken #title{
+
+    font-size:30px;
+
+}
+
+.body_crispy_Chicken img{
+
+    height:260px;
+
+}
+
+.body_crispy_Chicken #p_about{
+
+    font-size:16px;
+
+}
+
+.body_crispy_Chicken #p_ingredients,
+.body_crispy_Chicken #p_Preparation_Steps{
+
+    font-size:15px;
+
+}
+
+}
+/*==========================================
+            BURGER PAGE
+==========================================*/
+
+.body_Burger{
+
+    width:80%;
+
+    margin:50px auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.body_Burger #title{
+
+    text-align:center;
+
+    color:#c62828;
+
+    font-size:40px;
+
+    margin-bottom:30px;
+
+}
+
+.body_Burger img{
+
+    width:100%;
+
+    height:500px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    margin-bottom:30px;
+
+}
+
+.body_Burger #About,
+.body_Burger #ingredients,
+.body_Burger #Preparation_Steps,
+.body_Burger #Recipe_Information{
+
+    color:#c62828;
+
+    margin-top:35px;
+
+    margin-bottom:20px;
+
+}
+
+.body_Burger #p_about{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#555;
+
+}
+
+.body_Burger ul,
+.body_Burger ol{
+
+    margin-left:35px;
+
+}
+
+.body_Burger li{
+
+    margin-bottom:12px;
+
+}
+
+.body_Burger #p_ingredients,
+.body_Burger #p_Preparation_Steps{
+
+    font-size:17px;
+
+    color:#444;
+
+}
+
+.body_Burger #p_Recipe_Information,
+.body_Burger #p_2_Recipe_Information{
+
+    font-size:18px;
+
+    color:#444;
+
+    margin-top:10px;
+
+}
+
+@media(max-width:768px){
+
+.body_Burger{
+
+    width:95%;
+
+    padding:20px;
+
+}
+
+.body_Burger #title{
+
+    font-size:30px;
+
+}
+
+.body_Burger img{
+
+    height:260px;
+
+}
+
+.body_Burger #p_about{
+
+    font-size:16px;
+
+}
+
+.body_Burger #p_ingredients,
+.body_Burger #p_Preparation_Steps{
+
+    font-size:15px;
+
+}
+
+}
+
+/* ===================================== */
+/* Pizza Recipe                          */
+/* ===================================== */
+
+.body_Pizza
+{
+    width: 100%;
+    min-height: 1200px;
+    background-color: rgb(250,250,250);
+}
+
+.body_Pizza #title
+{
+    text-align: center;
+    font-size: 45px;
+    color: #c62828;
+    padding-top: 30px;
+}
+
+.body_Pizza img
+{
+    width: 500px;
+    height: 350px;
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px gray;
+}
+
+.body_Pizza #About
+{
+    margin-left: 120px;
+    margin-top: 40px;
+    color: #c62828;
+}
+
+.body_Pizza #p_about
+{
+    width: 85%;
+    margin-left: 120px;
+    font-size: 22px;
+    line-height: 40px;
+}
+
+.body_Pizza #ingredients
+{
+    margin-left: 120px;
+    margin-top: 40px;
+    color: #c62828;
+}
+
+.body_Pizza #ul_ingredients
+{
+    margin-left: 150px;
+}
+
+.body_Pizza #p_ingredients
+{
+    font-size: 22px;
+    line-height: 35px;
+}
+
+.body_Pizza #Preparation_Steps
+{
+    margin-left: 120px;
+    margin-top: 40px;
+    color: #c62828;
+}
+
+.body_Pizza #ol_Preparation_Steps
+{
+    margin-left: 150px;
+}
+
+.body_Pizza #p_Preparation_Steps
+{
+    font-size: 22px;
+    line-height: 35px;
+}
+
+.body_Pizza #Recipe_Information
+{
+    margin-left: 120px;
+    margin-top: 40px;
+    color: #c62828;
+}
+
+.body_Pizza #p_Recipe_Information
+{
+    margin-left: 120px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.body_Pizza #p_2_Recipe_Information
+{
+    margin-left: 120px;
+    font-size: 22px;
+    font-weight: bold;
+    padding-bottom: 40px;
+}
+/* ========================= */
+/* Pizza Recipe Responsive   */
+/* ========================= */
+
+@media (max-width:768px)
+{
+    .body_Pizza
+    {
+        width:95%;
+        margin:auto;
+        padding:20px;
+        text-align:center;
+    }
+
+    .body_Pizza #title
+    {
+        font-size:34px;
+    }
+
+    .body_Pizza img
+    {
+        width:95%;
+        height:auto;
+        border-radius:15px;
+    }
+
+    .body_Pizza #About,
+    .body_Pizza #ingredients,
+    .body_Pizza #Preparation_Steps,
+    .body_Pizza #Recipe_Information
+    {
+        font-size:28px;
+        margin-top:30px;
+    }
+
+    .body_Pizza #p_about
+    {
+        width:100%;
+        font-size:20px;
+        line-height:35px;
+        text-align:justify;
+    }
+
+    .body_Pizza #ul_ingredients,
+    .body_Pizza #ol_Preparation_Steps
+    {
+        width:100%;
+        padding-left:25px;
+    }
+
+    .body_Pizza #p_ingredients,
+    .body_Pizza #p_Preparation_Steps
+    {
+        font-size:20px;
+        line-height:35px;
+    }
+
+    .body_Pizza #p_Recipe_Information,
+    .body_Pizza #p_2_Recipe_Information
+    {
+        font-size:22px;
+    }
+}
+/* ===================================== */
+/* Grilled Steak Recipe                  */
+/* ===================================== */
+
+.body_Grilled_Steak
+{
+    width: 100%;
+    min-height: 1200px;
+    background-color: rgb(250,250,250);
+}
+
+.body_Grilled_Steak #title
+{
+    text-align: center;
+    font-size: 45px;
+    color: #8B0000;
+    padding-top: 30px;
+}
+
+.body_Grilled_Steak img
+{
+    width: 500px;
+    height: 350px;
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px gray;
+}
+
+.body_Grilled_Steak #About
+{
+    margin-left: 120px;
+    margin-top: 40px;
+    color: #8B0000;
+}
+
+.body_Grilled_Steak #p_about
+{
+    width: 85%;
+    margin-left: 120px;
+    font-size: 22px;
+    line-height: 40px;
+}
+
+.body_Grilled_Steak #ingredients
+{
+    margin-left: 120px;
+    margin-top: 40px;
+    color: #8B0000;
+}
+
+.body_Grilled_Steak #ul_ingredients
+{
+    margin-left: 150px;
+}
+
+.body_Grilled_Steak #p_ingredients
+{
+    font-size: 22px;
+    line-height: 35px;
+}
+
+.body_Grilled_Steak #Preparation_Steps
+{
+    margin-left: 120px;
+    margin-top: 40px;
+    color: #8B0000;
+}
+
+.body_Grilled_Steak #ol_Preparation_Steps
+{
+    margin-left: 150px;
+}
+
+.body_Grilled_Steak #p_Preparation_Steps
+{
+    font-size: 22px;
+    line-height: 35px;
+}
+
+.body_Grilled_Steak #Recipe_Information
+{
+    margin-left: 120px;
+    margin-top: 40px;
+    color: #8B0000;
+}
+
+.body_Grilled_Steak #p_Recipe_Information
+{
+    margin-left: 120px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.body_Grilled_Steak #p_2_Recipe_Information
+{
+    margin-left: 120px;
+    font-size: 22px;
+    font-weight: bold;
+    padding-bottom: 40px;
+}
+/* ===================================== */
+/* Responsive - Grilled Steak            */
+/* ===================================== */
+
+@media screen and (max-width:768px)
+{
+    .body_Grilled_Steak
+    {
+        width:100%;
+        min-height:auto;
+        padding-bottom:40px;
+    }
+
+    .body_Grilled_Steak #title
+    {
+        font-size:32px;
+        padding-top:20px;
+    }
+
+    .body_Grilled_Steak img
+    {
+        width:90%;
+        height:auto;
+        margin:auto;
+        display:block;
+    }
+
+    .body_Grilled_Steak #About,
+    .body_Grilled_Steak #ingredients,
+    .body_Grilled_Steak #Preparation_Steps,
+    .body_Grilled_Steak #Recipe_Information
+    {
+        margin-left:20px;
+        margin-top:30px;
+        font-size:30px;
+    }
+
+    .body_Grilled_Steak #p_about
+    {
+        width:90%;
+        margin-left:20px;
+        font-size:18px;
+        line-height:32px;
+    }
+
+    .body_Grilled_Steak #ul_ingredients,
+    .body_Grilled_Steak #ol_Preparation_Steps
+    {
+        margin-left:35px;
+    }
+
+    .body_Grilled_Steak #p_ingredients,
+    .body_Grilled_Steak #p_Preparation_Steps
+    {
+        font-size:18px;
+        line-height:30px;
+    }
+
+    .body_Grilled_Steak #p_Recipe_Information,
+    .body_Grilled_Steak #p_2_Recipe_Information
+    {
+        margin-left:20px;
+        font-size:18px;
+    }
+}
+/* ===================================== */
+/* Grilled Salmon Recipe                 */
+/* ===================================== */
+
+.body_Grilled_Salmon
+{
+    width: 100%;
+    min-height: 1200px;
+    background-color: rgb(250,250,250);
+}
+
+.body_Grilled_Salmon #title
+{
+    text-align: center;
+    font-size: 45px;
+    color: #c62828;
+    padding-top: 30px;
+}
+
+.body_Grilled_Salmon img
+{
+    width: 500px;
+    height: 350px;
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px gray;
+}
+
+.body_Grilled_Salmon #About
+{
+    margin-left: 120px;
+    margin-top: 40px;
+    color: #c62828;
+}
+
+.body_Grilled_Salmon #p_about
+{
+    width: 85%;
+    margin-left: 120px;
+    font-size: 22px;
+    line-height: 40px;
+}
+
+.body_Grilled_Salmon #ingredients
+{
+    margin-left: 120px;
+    margin-top: 40px;
+    color: #c62828;
+}
+
+.body_Grilled_Salmon #ul_ingredients
+{
+    margin-left: 150px;
+}
+
+.body_Grilled_Salmon #p_ingredients
+{
+    font-size: 22px;
+    line-height: 35px;
+}
+
+.body_Grilled_Salmon #Preparation_Steps
+{
+    margin-left: 120px;
+    margin-top: 40px;
+    color: #c62828;
+}
+
+.body_Grilled_Salmon #ol_Preparation_Steps
+{
+    margin-left: 150px;
+}
+
+.body_Grilled_Salmon #p_Preparation_Steps
+{
+    font-size: 22px;
+    line-height: 35px;
+}
+
+.body_Grilled_Salmon #Recipe_Information
+{
+    margin-left: 120px;
+    margin-top: 40px;
+    color: #c62828;
+}
+
+.body_Grilled_Salmon #p_Recipe_Information
+{
+    margin-left: 120px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.body_Grilled_Salmon #p_2_Recipe_Information
+{
+    margin-left: 120px;
+    font-size: 22px;
+    font-weight: bold;
+    padding-bottom: 40px;
+}
+/* ===================================== */
+/* Responsive - Grilled Salmon           */
+/* ===================================== */
+
+@media screen and (max-width:768px)
+{
+    .body_Grilled_Salmon
+    {
+        width:100%;
+        min-height:auto;
+        padding-bottom:40px;
+    }
+
+    .body_Grilled_Salmon #title
+    {
+        font-size:32px;
+        padding-top:20px;
+        text-align:center;
+    }
+
+    .body_Grilled_Salmon img
+    {
+        width:90%;
+        height:auto;
+        display:block;
+        margin:auto;
+        border-radius:15px;
+    }
+
+    .body_Grilled_Salmon #About
+    {
+        margin-left:20px;
+        margin-top:30px;
+        font-size:30px;
+    }
+
+    .body_Grilled_Salmon #p_about
+    {
+        width:90%;
+        margin-left:20px;
+        font-size:18px;
+        line-height:32px;
+    }
+
+    .body_Grilled_Salmon #ingredients
+    {
+        margin-left:20px;
+        margin-top:30px;
+        font-size:30px;
+    }
+
+    .body_Grilled_Salmon #ul_ingredients
+    {
+        margin-left:35px;
+    }
+
+    .body_Grilled_Salmon #p_ingredients
+    {
+        font-size:18px;
+        line-height:30px;
+    }
+
+    .body_Grilled_Salmon #Preparation_Steps
+    {
+        margin-left:20px;
+        margin-top:30px;
+        font-size:30px;
+    }
+
+    .body_Grilled_Salmon #ol_Preparation_Steps
+    {
+        margin-left:35px;
+    }
+
+    .body_Grilled_Salmon #p_Preparation_Steps
+    {
+        font-size:18px;
+        line-height:30px;
+    }
+
+    .body_Grilled_Salmon #Recipe_Information
+    {
+        margin-left:20px;
+        margin-top:30px;
+        font-size:30px;
+    }
+
+    .body_Grilled_Salmon #p_Recipe_Information
+    {
+        margin-left:20px;
+        font-size:18px;
+    }
+
+    .body_Grilled_Salmon #p_2_Recipe_Information
+    {
+        margin-left:20px;
+        font-size:18px;
+        padding-bottom:30px;
+    }
+}
+/* ===================================== */
+/* Chocolate Brownie Recipe              */
+/* ===================================== */
+
+.body_Chocolate_Brownie
+{
+    width: 100%;
+    min-height: 1200px;
+    background-color: rgb(250,250,250);
+}
+
+.body_Chocolate_Brownie #title
+{
+    text-align: center;
+    font-size: 45px;
+    color: #c62828;
+    padding-top: 30px;
+}
+
+.body_Chocolate_Brownie img
+{
+    width: 500px;
+    height: 350px;
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px gray;
+}
+
+.body_Chocolate_Brownie #About
+{
+    margin-left: 120px;
+    margin-top: 40px;
+    color: #c62828;
+}
+
+.body_Chocolate_Brownie #p_about
+{
+    width: 85%;
+    margin-left: 120px;
+    font-size: 22px;
+    line-height: 40px;
+}
+
+.body_Chocolate_Brownie #ingredients
+{
+    margin-left: 120px;
+    margin-top: 40px;
+    color: #c62828;
+}
+
+.body_Chocolate_Brownie #ul_ingredients
+{
+    margin-left: 150px;
+}
+
+.body_Chocolate_Brownie #p_ingredients
+{
+    font-size: 22px;
+    line-height: 35px;
+}
+
+.body_Chocolate_Brownie #Preparation_Steps
+{
+    margin-left: 120px;
+    margin-top: 40px;
+    color: #c62828;
+}
+
+.body_Chocolate_Brownie #ol_Preparation_Steps
+{
+    margin-left: 150px;
+}
+
+.body_Chocolate_Brownie #p_Preparation_Steps
+{
+    font-size: 22px;
+    line-height: 35px;
+}
+
+.body_Chocolate_Brownie #Recipe_Information
+{
+    margin-left: 120px;
+    margin-top: 40px;
+    color: #c62828;
+}
+
+.body_Chocolate_Brownie #p_Recipe_Information
+{
+    margin-left: 120px;
+    font-size: 22px;
+}
+
+.body_Chocolate_Brownie #p_2_Recipe_Information
+{
+    margin-left: 120px;
+    font-size: 22px;
+    padding-bottom: 40px;
+}
+/* ===================================== */
+/* Responsive - Chocolate Brownie        */
+/* ===================================== */
+
+@media screen and (max-width:768px)
+{
+    .body_Chocolate_Brownie
+    {
+        width:100%;
+        min-height:auto;
+        padding-bottom:40px;
+    }
+
+    .body_Chocolate_Brownie #title
+    {
+        font-size:32px;
+        text-align:center;
+        padding-top:20px;
+    }
+
+    .body_Chocolate_Brownie img
+    {
+        width:90%;
+        height:auto;
+        display:block;
+        margin:auto;
+        border-radius:15px;
+    }
+
+    .body_Chocolate_Brownie #About,
+    .body_Chocolate_Brownie #ingredients,
+    .body_Chocolate_Brownie #Preparation_Steps,
+    .body_Chocolate_Brownie #Recipe_Information
+    {
+        margin-left:20px;
+        margin-top:30px;
+        font-size:30px;
+    }
+
+    .body_Chocolate_Brownie #p_about
+    {
+        width:90%;
+        margin-left:20px;
+        font-size:18px;
+        line-height:32px;
+    }
+
+    .body_Chocolate_Brownie #ul_ingredients,
+    .body_Chocolate_Brownie #ol_Preparation_Steps
+    {
+        margin-left:35px;
+    }
+
+    .body_Chocolate_Brownie #p_ingredients,
+    .body_Chocolate_Brownie #p_Preparation_Steps
+    {
+        font-size:18px;
+        line-height:30px;
+    }
+
+    .body_Chocolate_Brownie #p_Recipe_Information,
+    .body_Chocolate_Brownie #p_2_Recipe_Information
+    {
+        margin-left:20px;
+        font-size:18px;
+    }
+}
+/* ===================================== */
+/* Spaghetti Bolognese Recipe            */
+/* ===================================== */
+
+.body_Spaghetti_Bolognese
+{
+    width: 100%;
+    min-height: 1200px;
+    background-color: rgb(250,250,250);
+}
+
+.body_Spaghetti_Bolognese #title
+{
+    text-align: center;
+    font-size: 45px;
+    color: #c62828;
+    padding-top: 30px;
+}
+
+.body_Spaghetti_Bolognese img
+{
+    width: 500px;
+    height: 350px;
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px gray;
+}
+
+.body_Spaghetti_Bolognese #About
+{
+    margin-left: 120px;
+    margin-top: 40px;
+    color: #c62828;
+}
+
+.body_Spaghetti_Bolognese #p_about
+{
+    width: 85%;
+    margin-left: 120px;
+    font-size: 22px;
+    line-height: 40px;
+}
+
+.body_Spaghetti_Bolognese #ingredients
+{
+    margin-left: 120px;
+    margin-top: 40px;
+    color: #c62828;
+}
+
+.body_Spaghetti_Bolognese #ul_ingredients
+{
+    margin-left: 150px;
+}
+
+.body_Spaghetti_Bolognese #p_ingredients
+{
+    font-size: 22px;
+    line-height: 35px;
+}
+
+.body_Spaghetti_Bolognese #Preparation_Steps
+{
+    margin-left: 120px;
+    margin-top: 40px;
+    color: #c62828;
+}
+
+.body_Spaghetti_Bolognese #ol_Preparation_Steps
+{
+    margin-left: 150px;
+}
+
+.body_Spaghetti_Bolognese #p_Preparation_Steps
+{
+    font-size: 22px;
+    line-height: 35px;
+}
+
+.body_Spaghetti_Bolognese #Recipe_Information
+{
+    margin-left: 120px;
+    margin-top: 40px;
+    color: #c62828;
+}
+
+.body_Spaghetti_Bolognese #p_Recipe_Information
+{
+    margin-left: 120px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.body_Spaghetti_Bolognese #p_2_Recipe_Information
+{
+    margin-left: 120px;
+    font-size: 22px;
+    font-weight: bold;
+    padding-bottom: 40px;
+}
+/* ===================================== */
+/* Responsive - Spaghetti Bolognese      */
+/* ===================================== */
+
+@media screen and (max-width:768px)
+{
+    .body_Spaghetti_Bolognese
+    {
+        width:100%;
+        min-height:auto;
+        padding-bottom:40px;
+    }
+
+    .body_Spaghetti_Bolognese #title
+    {
+        font-size:32px;
+        text-align:center;
+        padding-top:20px;
+    }
+
+    .body_Spaghetti_Bolognese img
+    {
+        width:90%;
+        height:auto;
+        display:block;
+        margin:auto;
+        border-radius:15px;
+    }
+
+    .body_Spaghetti_Bolognese #About,
+    .body_Spaghetti_Bolognese #ingredients,
+    .body_Spaghetti_Bolognese #Preparation_Steps,
+    .body_Spaghetti_Bolognese #Recipe_Information
+    {
+        margin-left:20px;
+        margin-top:30px;
+        font-size:30px;
+    }
+
+    .body_Spaghetti_Bolognese #p_about
+    {
+        width:90%;
+        margin-left:20px;
+        font-size:18px;
+        line-height:32px;
+    }
+
+    .body_Spaghetti_Bolognese #ul_ingredients,
+    .body_Spaghetti_Bolognese #ol_Preparation_Steps
+    {
+        margin-left:35px;
+    }
+
+    .body_Spaghetti_Bolognese #p_ingredients,
+    .body_Spaghetti_Bolognese #p_Preparation_Steps
+    {
+        font-size:18px;
+        line-height:30px;
+    }
+
+    .body_Spaghetti_Bolognese #p_Recipe_Information,
+    .body_Spaghetti_Bolognese #p_2_Recipe_Information
+    {
+        margin-left:20px;
+        font-size:18px;
+    }
+}
+/* ===================================== */
+/* Lava Cake Recipe                      */
+/* ===================================== */
+
+.body_Lava_Cake
+{
+    width: 100%;
+    min-height: 1200px;
+    background-color: rgb(250,250,250);
+}
+
+.body_Lava_Cake #title
+{
+    text-align: center;
+    font-size: 45px;
+    color: #c62828;
+    padding-top: 30px;
+}
+
+.body_Lava_Cake img
+{
+    width: 500px;
+    height: 350px;
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px gray;
+}
+
+.body_Lava_Cake #About
+{
+    margin-left: 120px;
+    margin-top: 40px;
+    color: #c62828;
+}
+
+.body_Lava_Cake #p_about
+{
+    width: 85%;
+    margin-left: 120px;
+    font-size: 22px;
+    line-height: 40px;
+}
+
+.body_Lava_Cake #ingredients
+{
+    margin-left: 120px;
+    margin-top: 40px;
+    color: #c62828;
+}
+
+.body_Lava_Cake #ul_ingredients
+{
+    margin-left: 150px;
+}
+
+.body_Lava_Cake #p_ingredients
+{
+    font-size: 22px;
+    line-height: 35px;
+}
+
+.body_Lava_Cake #Preparation_Steps
+{
+    margin-left: 120px;
+    margin-top: 40px;
+    color: #c62828;
+}
+
+.body_Lava_Cake #ol_Preparation_Steps
+{
+    margin-left: 150px;
+}
+
+.body_Lava_Cake #p_Preparation_Steps
+{
+    font-size: 22px;
+    line-height: 35px;
+}
+
+.body_Lava_Cake #Recipe_Information
+{
+    margin-left: 120px;
+    margin-top: 40px;
+    color: #c62828;
+}
+
+.body_Lava_Cake #p_Recipe_Information
+{
+    margin-left: 120px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.body_Lava_Cake #p_2_Recipe_Information
+{
+    margin-left: 120px;
+    font-size: 22px;
+    font-weight: bold;
+    padding-bottom: 40px;
+}
+/* =========================
+   Reservation Page
+========================= */
+
+.reservation {
+    width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.reservation h1 {
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+
+.reservation p {
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.reservation form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.reservation label {
+    margin-bottom: 7px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.reservation input {
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.reservation input:focus {
+    outline: none;
+    border: 2px solid #d4af37;
+}
+
+.reservation button {
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background-color: #d4af37;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.reservation button:hover {
+    background-color: #b8941f;
+}
+/* =========================
+   Reservation Responsive
+========================= */
+
+@media (max-width: 768px) {
+
+    .reservation {
+        width: 80%;
+        margin: 30px auto;
+        padding: 25px;
+    }
+
+    .reservation h1 {
+        font-size: 30px;
+    }
+
+    .reservation p {
+        font-size: 16px;
+    }
+
+    .reservation input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .reservation button {
+        width: 100%;
+    }
+
+}
