@@ -52,3 +52,82 @@ function send_message ()
         window.alert("Your message has been sent successfully!");
     }
 }
+var languageBtn = document.getElementById("languageBtn");
+
+
+// =========================
+// CHANGE LANGUAGE
+// =========================
+
+languageBtn.addEventListener("click", function () {
+
+    var elements = document.querySelectorAll("[data-en][data-ar]");
+
+    if (document.documentElement.lang === "en") {
+
+        // Change to Arabic
+
+        elements.forEach(function (element) {
+
+            element.innerHTML = element.getAttribute("data-ar");
+
+        });
+
+        document.documentElement.lang = "ar";
+        document.documentElement.dir = "rtl";
+
+        languageBtn.innerHTML = "English";
+
+        localStorage.setItem("language", "ar");
+
+    }
+
+    else {
+
+        // Change to English
+
+        elements.forEach(function (element) {
+
+            element.innerHTML = element.getAttribute("data-en");
+
+        });
+
+        document.documentElement.lang = "en";
+        document.documentElement.dir = "ltr";
+
+        languageBtn.innerHTML = "العربية";
+
+        localStorage.setItem("language", "en");
+
+    }
+
+});
+
+
+// =========================
+// LOAD SAVED LANGUAGE
+// =========================
+
+window.addEventListener("load", function () {
+
+    var savedLanguage = localStorage.getItem("language");
+
+    var elements = document.querySelectorAll("[data-en][data-ar]");
+
+
+    if (savedLanguage === "ar") {
+
+        elements.forEach(function (element) {
+
+            element.innerHTML = element.getAttribute("data-ar");
+
+        });
+
+        document.documentElement.lang = "ar";
+        document.documentElement.dir = "rtl";
+
+        languageBtn.innerHTML = "English";
+
+    }
+
+});
