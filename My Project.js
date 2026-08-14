@@ -134,6 +134,7 @@ function send_message() {
 
 }
 
+var currentLanguage = "en";
 
 // =========================
 // LANGUAGE
@@ -141,29 +142,26 @@ function send_message() {
 
 var languageBtn = document.getElementById("languageBtn");
 
+var currentLanguage = "en";
+
+
 languageBtn.addEventListener("click", function () {
 
     var elements = document.querySelectorAll("[data-en][data-ar]");
 
 
-    elements.forEach(function (element) {
+    if (currentLanguage === "en") {
 
-        if (document.documentElement.lang === "en") {
+        // Change all page text to Arabic
+
+        elements.forEach(function (element) {
 
             element.innerHTML = element.getAttribute("data-ar");
 
-        }
-
-        else {
-
-            element.innerHTML = element.getAttribute("data-en");
-
-        }
-
-    });
+        });
 
 
-    if (document.documentElement.lang === "en") {
+        currentLanguage = "ar";
 
         document.documentElement.lang = "ar";
 
@@ -172,13 +170,24 @@ languageBtn.addEventListener("click", function () {
         languageBtn.innerHTML = "English";
 
 
-        // Update slider text
+        // Change slider text
 
         document.getElementById("h2_1").innerHTML = p_ar[x];
 
     }
 
     else {
+
+        // Change all page text to English
+
+        elements.forEach(function (element) {
+
+            element.innerHTML = element.getAttribute("data-en");
+
+        });
+
+
+        currentLanguage = "en";
 
         document.documentElement.lang = "en";
 
@@ -187,7 +196,7 @@ languageBtn.addEventListener("click", function () {
         languageBtn.innerHTML = "العربية";
 
 
-        // Update slider text
+        // Change slider text
 
         document.getElementById("h2_1").innerHTML = p_en[x];
 
