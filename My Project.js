@@ -160,6 +160,28 @@ function changeLanguage() {
     });
 
 
+    // تغيير الـ Placeholder
+    var inputs = document.querySelectorAll(
+        "[data-en-placeholder][data-ar-placeholder]"
+    );
+
+    inputs.forEach(function (input) {
+
+        if (currentLanguage === "ar") {
+
+            input.placeholder =
+                input.getAttribute("data-ar-placeholder");
+
+        } else {
+
+            input.placeholder =
+                input.getAttribute("data-en-placeholder");
+
+        }
+
+    });
+
+
     if (currentLanguage === "ar") {
 
         document.documentElement.lang = "ar";
