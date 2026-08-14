@@ -135,6 +135,69 @@ function send_message() {
 }
 
 
+
+var languageBtn = document.getElementById("languageBtn");
+
+var currentLanguage = localStorage.getItem("language") || "en";
+
+
+function changeLanguage() {
+
+    var elements = document.querySelectorAll("[data-en][data-ar]");
+
+    elements.forEach(function (element) {
+
+        if (currentLanguage === "ar") {
+
+            element.innerHTML = element.getAttribute("data-ar");
+
+        } else {
+
+            element.innerHTML = element.getAttribute("data-en");
+
+        }
+
+    });
+
+
+    if (currentLanguage === "ar") {
+
+        document.documentElement.lang = "ar";
+
+        document.documentElement.dir = "rtl";
+
+        languageBtn.innerHTML = "English";
+
+    } else {
+
+        document.documentElement.lang = "en";
+
+        document.documentElement.dir = "ltr";
+
+        languageBtn.innerHTML = "العربية";
+
+    }
+
+
+    var sliderText = document.getElementById("h2_1");
+
+    if (sliderText) {
+
+        if (currentLanguage === "ar") {
+
+            sliderText.innerHTML = p_ar[x];
+
+        } else {
+
+            sliderText.innerHTML = p_en[x];
+
+        }
+
+    }
+
+}
+
+
 // =========================
 // LANGUAGE BUTTON
 // =========================
