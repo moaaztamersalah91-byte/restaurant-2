@@ -171,8 +171,6 @@ function changeLanguage() {
 
         languageBtn.innerHTML = "English";
 
-        document.getElementById("h2_1").innerHTML = p_ar[x];
-
     } else {
 
         document.documentElement.lang = "en";
@@ -181,39 +179,30 @@ function changeLanguage() {
 
         languageBtn.innerHTML = "العربية";
 
-        document.getElementById("h2_1").innerHTML = p_en[x];
+    }
+
+
+    // =========================
+    // SLIDER TEXT
+    // =========================
+
+    var sliderText = document.getElementById("h2_1");
+
+    if (sliderText) {
+
+        if (currentLanguage === "ar") {
+
+            sliderText.innerHTML = p_ar[x];
+
+        } else {
+
+            sliderText.innerHTML = p_en[x];
+
+        }
 
     }
 
 }
-
-
-// =========================
-// BUTTON
-// =========================
-
-languageBtn.addEventListener("click", function () {
-
-    if (currentLanguage === "en") {
-
-        currentLanguage = "ar";
-
-        localStorage.setItem("language", "ar");
-
-    } else {
-
-        currentLanguage = "en";
-
-        localStorage.setItem("language", "en");
-
-    }
-
-    console.log("Current language:", currentLanguage);
-    console.log("Saved language:", localStorage.getItem("language"));
-
-    changeLanguage();
-
-});
 
 
 // =========================
