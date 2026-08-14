@@ -203,16 +203,35 @@
 
     <div class="reservation">
 
-    <h1>Book a Table</h1>
+    <h1
+        data-en="Book a Table"
+        data-ar="احجز طاولة"
+    >
+        Book a Table
+    </h1>
 
-    <p>Reserve your table and enjoy a wonderful dining experience.</p>
+
+    <p
+        data-en="Reserve your table and enjoy a wonderful dining experience."
+        data-ar="احجز طاولتك واستمتع بتجربة طعام رائعة."
+    >
+        Reserve your table and enjoy a wonderful dining experience.
+    </p>
 
 
     <form action="https://formsubmit.co/moaaztamersalah91@gmail.com" method="POST">
 
-        <input type="hidden" name="_subject" value="New Table Reservation">
+        <input
+            type="hidden"
+            name="_subject"
+            value="New Table Reservation"
+        >
 
-        <input type="hidden" name="_template" value="table">
+        <input
+            type="hidden"
+            name="_template"
+            value="table"
+        >
 
         <input
             type="hidden"
@@ -220,35 +239,65 @@
             value="https://moaaztamersalah91-byte.github.io/restaurant-2/Thank%20You.html"
         >
 
-        <label>Your Name</label>
+
+        <label
+            data-en="Your Name"
+            data-ar="اسمك"
+        >
+            Your Name
+        </label>
 
         <input
             type="text"
             name="name"
+            data-en-placeholder="Enter your name"
+            data-ar-placeholder="أدخل اسمك"
             placeholder="Enter your name"
             required
         >
 
-        <label>Phone Number</label>
+
+        <label
+            data-en="Phone Number"
+            data-ar="رقم الهاتف"
+        >
+            Phone Number
+        </label>
 
         <input
             type="tel"
             name="phone"
+            data-en-placeholder="Enter your phone number"
+            data-ar-placeholder="أدخل رقم هاتفك"
             placeholder="Enter your phone number"
             required
         >
 
-        <label>Number of Guests</label>
+
+        <label
+            data-en="Number of Guests"
+            data-ar="عدد الضيوف"
+        >
+            Number of Guests
+        </label>
 
         <input
             type="number"
             name="guests"
             min="1"
+            data-en-placeholder="Number of guests"
+            data-ar-placeholder="عدد الضيوف"
             placeholder="Number of guests"
             required
         >
 
-        <label>Date</label>
+
+        <label
+            data-en="Date"
+            data-ar="التاريخ"
+        >
+            Date
+        </label>
 
         <input
             type="date"
@@ -256,7 +305,13 @@
             required
         >
 
-        <label>Time</label>
+
+        <label
+            data-en="Time"
+            data-ar="الوقت"
+        >
+            Time
+        </label>
 
         <input
             type="time"
@@ -264,7 +319,14 @@
             required
         >
 
-        <button type="submit">Book Now</button>
+
+        <button
+            type="submit"
+            data-en="Book Now"
+            data-ar="احجز الآن"
+        >
+            Book Now
+        </button>
 
     </form>
 
