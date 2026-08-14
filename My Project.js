@@ -122,7 +122,7 @@ function send_message() {
 
     if (message == "") {
 
-        if (currentLanguage === "ar") {
+        if (document.documentElement.lang === "ar") {
 
             window.alert("من فضلك اكتب رسالة!");
 
@@ -134,7 +134,7 @@ function send_message() {
 
     } else {
 
-        if (currentLanguage === "ar") {
+        if (document.documentElement.lang === "ar") {
 
             window.alert("تم إرسال رسالتك بنجاح!");
 
