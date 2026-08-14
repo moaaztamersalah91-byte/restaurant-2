@@ -144,10 +144,6 @@ var languageBtn = document.getElementById("languageBtn");
 var currentLanguage = localStorage.getItem("language") || "en";
 
 
-// =========================
-// CHANGE LANGUAGE
-// =========================
-
 function changeLanguage() {
 
     var elements = document.querySelectorAll("[data-en][data-ar]");
@@ -158,9 +154,7 @@ function changeLanguage() {
 
             element.innerHTML = element.getAttribute("data-ar");
 
-        }
-
-        else {
+        } else {
 
             element.innerHTML = element.getAttribute("data-en");
 
@@ -179,9 +173,7 @@ function changeLanguage() {
 
         document.getElementById("h2_1").innerHTML = p_ar[x];
 
-    }
-
-    else {
+    } else {
 
         document.documentElement.lang = "en";
 
@@ -208,9 +200,7 @@ languageBtn.addEventListener("click", function () {
 
         localStorage.setItem("language", "ar");
 
-    }
-
-    else {
+    } else {
 
         currentLanguage = "en";
 
@@ -218,13 +208,16 @@ languageBtn.addEventListener("click", function () {
 
     }
 
+    console.log("Current language:", currentLanguage);
+    console.log("Saved language:", localStorage.getItem("language"));
+
     changeLanguage();
 
 });
 
 
 // =========================
-// LOAD SAVED LANGUAGE
+// LOAD
 // =========================
 
 changeLanguage();
