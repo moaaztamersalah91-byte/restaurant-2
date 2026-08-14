@@ -148,27 +148,28 @@ var currentLanguage = localStorage.getItem("language") || "en";
 // CHANGE LANGUAGE
 // =========================
 
-languageBtn.addEventListener("click", function () {
+function changeLanguage() {
 
     var elements = document.querySelectorAll("[data-en][data-ar]");
 
+    elements.forEach(function (element) {
 
-    if (currentLanguage === "en") {
+        if (currentLanguage === "ar") {
 
-        // =========================
-        // ENGLISH -> ARABIC
-        // =========================
+            element.innerHTML = element.getAttribute("data-ar");
 
-        elements.forEach(function (element) {
+        }
 
-            element.innerHTML =
-                element.getAttribute("data-ar");
+        else {
 
-        });
+            element.innerHTML = element.getAttribute("data-en");
 
-        currentLanguage = "ar";
+        }
 
-        localStorage.setItem("language", "ar");
+    });
+
+
+    if (currentLanguage === "ar") {
 
         document.documentElement.lang = "ar";
 
@@ -176,30 +177,11 @@ languageBtn.addEventListener("click", function () {
 
         languageBtn.innerHTML = "English";
 
-
-        // Change Slider
-
-        document.getElementById("h2_1").innerHTML =
-            p_ar[x];
+        document.getElementById("h2_1").innerHTML = p_ar[x];
 
     }
 
     else {
-
-        // =========================
-        // ARABIC -> ENGLISH
-        // =========================
-
-        elements.forEach(function (element) {
-
-            element.innerHTML =
-                element.getAttribute("data-en");
-
-        });
-
-        currentLanguage = "en";
-
-        localStorage.setItem("language", "en");
 
         document.documentElement.lang = "en";
 
@@ -207,13 +189,36 @@ languageBtn.addEventListener("click", function () {
 
         languageBtn.innerHTML = "العربية";
 
-
-        // Change Slider
-
-        document.getElementById("h2_1").innerHTML =
-            p_en[x];
+        document.getElementById("h2_1").innerHTML = p_en[x];
 
     }
+
+}
+
+
+// =========================
+// BUTTON
+// =========================
+
+languageBtn.addEventListener("click", function () {
+
+    if (currentLanguage === "en") {
+
+        currentLanguage = "ar";
+
+        localStorage.setItem("language", "ar");
+
+    }
+
+    else {
+
+        currentLanguage = "en";
+
+        localStorage.setItem("language", "en");
+
+    }
+
+    changeLanguage();
 
 });
 
@@ -222,32 +227,4 @@ languageBtn.addEventListener("click", function () {
 // LOAD SAVED LANGUAGE
 // =========================
 
-window.addEventListener("load", function () {
-
-    var elements = document.querySelectorAll("[data-en][data-ar]");
-
-
-    if (currentLanguage === "ar") {
-
-        elements.forEach(function (element) {
-
-            element.innerHTML =
-                element.getAttribute("data-ar");
-
-        });
-
-        document.documentElement.lang = "ar";
-
-        document.documentElement.dir = "rtl";
-
-        languageBtn.innerHTML = "English";
-
-
-        // Change Slider
-
-        document.getElementById("h2_1").innerHTML =
-            p_ar[x];
-
-    }
-
-});
+changeLanguage();
