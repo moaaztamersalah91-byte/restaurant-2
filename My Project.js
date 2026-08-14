@@ -122,18 +122,31 @@ function send_message() {
 
     if (message == "") {
 
-        window.alert("Please Write a Message!");
+        if (currentLanguage === "ar") {
 
-    }
+            window.alert("من فضلك اكتب رسالة!");
 
-    else {
+        } else {
 
-        window.alert("Your message has been sent successfully!");
+            window.alert("Please Write a Message!");
+
+        }
+
+    } else {
+
+        if (currentLanguage === "ar") {
+
+            window.alert("تم إرسال رسالتك بنجاح!");
+
+        } else {
+
+            window.alert("Your message has been sent successfully!");
+
+        }
 
     }
 
 }
-
 
 
 var languageBtn = document.getElementById("languageBtn");
