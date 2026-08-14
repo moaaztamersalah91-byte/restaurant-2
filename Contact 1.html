@@ -32,48 +32,174 @@
             </ul>
         </nav>
         <div class="body_contact">
-            <div id="table">
-                <div id="title">
-                    <h1> Contact Us </h1>
-                    <h1> We'd Love to Hear From You </h1>
-                </div>
-                <form>
-                    <h2 id="Address"> Address </h2>
-                    <input type="text" disabled value="123 Food Street, Cairo, Egypt" />
-                    <h2> Phone </h2>
-                    <input type="text" disabled value="01097446721" />
-                    <h2> Email </h2>
-                    <input type="email" disabled value="moaaztamersalah91@gmail.com" />
-                    <h2 id="Opening"> Opening Hours </h2>
-                    <div id="div_opening">
-                        <p>
-                            Every Day
-                        </p>
-                        <br/>
-                        <p id="#p_2">
-                            10:00 AM - 12:00 AM
-                        </p>
-                    </div>
-                </form>
-            </div>
-            <div id="table_2">
-                <div id="title_2">
-                    <h1> Contact Us </h1>
-                    <h1> Send US a Message </h1>
-                </div>
-                <form>
-                    <h2 id="Address_2"> Address </h2>
-                    <input type="text" placeholder="Enter Your Address" />
-                    <h2> Phone </h2>
-                    <input type="text" placeholder="Enter Phone Number" />
-                    <h2> Email </h2>
-                    <input type="email" placeholder="Enter Your Gmail" />
-                    <h2 id="Message"> Message </h2>
-                    <input id="text_message" type="text" placeholder="Write a Message" />
-                </form>
-                <button id="send_message" onclick="send_message ();"> Send Message </button>
-            </div>
+
+    <div id="table">
+
+        <div id="title">
+
+            <h1 data-en="Contact Us" data-ar="تواصل معنا">
+                Contact Us
+            </h1>
+
+            <h1 data-en="We'd Love to Hear From You"
+                data-ar="يسعدنا أن نسمع منك">
+                We'd Love to Hear From You
+            </h1>
+
         </div>
+
+        <form>
+
+            <h2 id="Address"
+                data-en="Address"
+                data-ar="العنوان">
+                Address
+            </h2>
+
+            <input 
+                type="text"
+                disabled
+                value="123 Food Street, Cairo, Egypt"
+            />
+
+
+            <h2 data-en="Phone"
+                data-ar="الهاتف">
+                Phone
+            </h2>
+
+            <input 
+                type="text"
+                disabled
+                value="01097446721"
+            />
+
+
+            <h2 data-en="Email"
+                data-ar="البريد الإلكتروني">
+                Email
+            </h2>
+
+            <input 
+                type="email"
+                disabled
+                value="moaaztamersalah91@gmail.com"
+            />
+
+
+            <h2 id="Opening"
+                data-en="Opening Hours"
+                data-ar="مواعيد العمل">
+                Opening Hours
+            </h2>
+
+            <div id="div_opening">
+
+                <p data-en="Every Day"
+                   data-ar="كل يوم">
+                    Every Day
+                </p>
+
+                <br/>
+
+                <p>
+                    10:00 AM - 12:00 AM
+                </p>
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <div id="table_2">
+
+        <div id="title_2">
+
+            <h1 data-en="Contact Us"
+                data-ar="تواصل معنا">
+                Contact Us
+            </h1>
+
+            <h1 data-en="Send Us a Message"
+                data-ar="أرسل لنا رسالة">
+                Send Us a Message
+            </h1>
+
+        </div>
+
+
+        <form>
+
+            <h2 id="Address_2"
+                data-en="Address"
+                data-ar="العنوان">
+                Address
+            </h2>
+
+            <input 
+                type="text"
+                data-en-placeholder="Enter Your Address"
+                data-ar-placeholder="أدخل عنوانك"
+                placeholder="Enter Your Address"
+            />
+
+
+            <h2 data-en="Phone"
+                data-ar="الهاتف">
+                Phone
+            </h2>
+
+            <input 
+                type="text"
+                data-en-placeholder="Enter Phone Number"
+                data-ar-placeholder="أدخل رقم الهاتف"
+                placeholder="Enter Phone Number"
+            />
+
+
+            <h2 data-en="Email"
+                data-ar="البريد الإلكتروني">
+                Email
+            </h2>
+
+            <input 
+                type="email"
+                data-en-placeholder="Enter Your Gmail"
+                data-ar-placeholder="أدخل بريدك الإلكتروني"
+                placeholder="Enter Your Gmail"
+            />
+
+
+            <h2 id="Message"
+                data-en="Message"
+                data-ar="الرسالة">
+                Message
+            </h2>
+
+            <input 
+                id="text_message"
+                type="text"
+                data-en-placeholder="Write a Message"
+                data-ar-placeholder="اكتب رسالتك"
+                placeholder="Write a Message"
+            />
+
+        </form>
+
+
+        <button 
+            id="send_message"
+            onclick="send_message();"
+            data-en="Send Message"
+            data-ar="إرسال الرسالة">
+            Send Message
+        </button>
+
+    </div>
+
+</div>
         <footer>
             <h1> "Fresh Ingredients, Great Taste." </h1>
         </footer>
