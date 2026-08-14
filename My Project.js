@@ -136,77 +136,32 @@ function send_message() {
 
 
 // =========================
-// LANGUAGE
+// LANGUAGE BUTTON
 // =========================
 
-var languageBtn = document.getElementById("languageBtn");
+languageBtn.addEventListener("click", function () {
 
-var currentLanguage = localStorage.getItem("language") || "en";
+    if (currentLanguage === "en") {
 
+        currentLanguage = "ar";
 
-function changeLanguage() {
-
-    var elements = document.querySelectorAll("[data-en][data-ar]");
-
-    elements.forEach(function (element) {
-
-        if (currentLanguage === "ar") {
-
-            element.innerHTML = element.getAttribute("data-ar");
-
-        } else {
-
-            element.innerHTML = element.getAttribute("data-en");
-
-        }
-
-    });
-
-
-    if (currentLanguage === "ar") {
-
-        document.documentElement.lang = "ar";
-
-        document.documentElement.dir = "rtl";
-
-        languageBtn.innerHTML = "English";
+        localStorage.setItem("language", "ar");
 
     } else {
 
-        document.documentElement.lang = "en";
+        currentLanguage = "en";
 
-        document.documentElement.dir = "ltr";
-
-        languageBtn.innerHTML = "العربية";
+        localStorage.setItem("language", "en");
 
     }
 
+    changeLanguage();
 
-    // =========================
-    // SLIDER TEXT
-    // =========================
-
-    var sliderText = document.getElementById("h2_1");
-
-    if (sliderText) {
-
-        if (currentLanguage === "ar") {
-
-            sliderText.innerHTML = p_ar[x];
-
-        } else {
-
-            sliderText.innerHTML = p_en[x];
-
-        }
-
-    }
-
-}
+});
 
 
 // =========================
-// LOAD
+// LOAD SAVED LANGUAGE
 // =========================
 
 changeLanguage();
