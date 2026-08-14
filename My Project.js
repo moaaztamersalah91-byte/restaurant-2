@@ -65,7 +65,7 @@ function next_img() {
     document.getElementById("h1_1").innerHTML = count[x];
 
 
-    if (document.documentElement.lang === "ar") {
+    if (currentLanguage === "ar") {
 
         document.getElementById("h2_1").innerHTML = p_ar[x];
 
@@ -97,7 +97,7 @@ function prev_img() {
     document.getElementById("h1_1").innerHTML = count[x];
 
 
-    if (document.documentElement.lang === "ar") {
+    if (currentLanguage === "ar") {
 
         document.getElementById("h2_1").innerHTML = p_ar[x];
 
@@ -134,7 +134,6 @@ function send_message() {
 
 }
 
-var currentLanguage = "en";
 
 // =========================
 // LANGUAGE
@@ -152,11 +151,14 @@ languageBtn.addEventListener("click", function () {
 
     if (currentLanguage === "en") {
 
-        // Change all page text to Arabic
+        // =========================
+        // ENGLISH -> ARABIC
+        // =========================
 
         elements.forEach(function (element) {
 
-            element.innerHTML = element.getAttribute("data-ar");
+            element.innerHTML =
+                element.getAttribute("data-ar");
 
         });
 
@@ -170,19 +172,23 @@ languageBtn.addEventListener("click", function () {
         languageBtn.innerHTML = "English";
 
 
-        // Change slider text
+        // Change Slider
 
-        document.getElementById("h2_1").innerHTML = p_ar[x];
+        document.getElementById("h2_1").innerHTML =
+            p_ar[x];
 
     }
 
     else {
 
-        // Change all page text to English
+        // =========================
+        // ARABIC -> ENGLISH
+        // =========================
 
         elements.forEach(function (element) {
 
-            element.innerHTML = element.getAttribute("data-en");
+            element.innerHTML =
+                element.getAttribute("data-en");
 
         });
 
@@ -196,9 +202,10 @@ languageBtn.addEventListener("click", function () {
         languageBtn.innerHTML = "العربية";
 
 
-        // Change slider text
+        // Change Slider
 
-        document.getElementById("h2_1").innerHTML = p_en[x];
+        document.getElementById("h2_1").innerHTML =
+            p_en[x];
 
     }
 
