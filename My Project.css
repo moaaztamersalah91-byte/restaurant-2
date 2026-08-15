@@ -1581,10 +1581,11 @@ footer h1 {
     /* GALLERY */
 
     .body_gallery {
-        width: 95%;
+        width: 90%;
     }
 
     .body_gallery article img {
+        width: 100%;
         height: auto;
     }
 
