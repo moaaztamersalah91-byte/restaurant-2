@@ -938,107 +938,93 @@ footer h1 {
     }
 
 
-    /*================================
+   /*================================
               NAVBAR
-    =================================*/
+================================*/
 
-    nav {
-        width: 100%;
+nav {
+    width: 100%;
+    overflow: hidden;
+}
 
-        overflow-x: auto;
+nav > ul {
+    display: flex !important;
 
-        white-space: nowrap;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
 
-        scrollbar-width: none;
-    }
+    width: 100% !important;
+    min-width: 0 !important;
 
-    nav::-webkit-scrollbar {
-        display: none;
-    }
+    justify-content: space-around;
+    align-items: center;
 
-    nav > ul {
-        display: flex !important;
+    list-style: none;
+}
 
-        flex-direction: row !important;
+nav > ul > li {
+    display: flex !important;
 
-        flex-wrap: nowrap !important;
+    width: auto !important;
 
-        justify-content: flex-start;
+    flex-shrink: 1;
+}
 
-        align-items: center;
+nav > ul > li > a {
+    display: block;
 
-        width: max-content !important;
+    width: auto !important;
 
-        min-width: 100%;
+    padding: 10px 8px;
 
-        list-style: none;
-    }
+    font-size: 11px;
 
-    nav > ul > li {
-        display: inline-flex !important;
+    white-space: nowrap;
 
-        width: auto !important;
+    text-align: center;
+}
 
-        flex-shrink: 0;
-    }
+#languageBtn {
+    margin: 5px;
 
-    nav > ul > li > a {
-        display: block;
+    padding: 6px 10px;
 
-        width: auto !important;
+    font-size: 11px;
 
-        padding: 10px 12px;
-
-        font-size: 13px;
-
-        white-space: nowrap;
-
-        text-align: center;
-    }
-
-    #languageBtn {
-        margin: 5px 8px;
-
-        padding: 7px 14px;
-
-        font-size: 13px;
-
-        white-space: nowrap;
-    }
+    white-space: nowrap;
+}
 
 
-    /*================================
-              DROPDOWN
-    =================================*/
+/*================================
+             DROPDOWN
+================================*/
 
-    nav ul li ul {
-        position: absolute;
+nav ul li ul {
+    position: absolute;
 
-        left: 0;
+    left: 0;
+    top: 100%;
 
-        top: 100%;
+    width: 220px;
 
-        width: 220px;
+    display: none;
 
-        display: none;
+    flex-direction: column;
 
-        flex-direction: column;
+    white-space: normal;
+}
 
-        white-space: normal;
-    }
+nav ul li:hover > ul {
+    display: flex;
+}
 
-    nav ul li:hover > ul {
-        display: flex;
-    }
+nav ul li ul li {
+    width: 100%;
+}
 
-    nav ul li ul li {
-        width: 100%;
-    }
-
-    nav ul li ul li a {
-        padding: 12px;
-    }
-
+nav ul li ul li a {
+    padding: 12px;
+}
 
     /*================================
                 HOME
