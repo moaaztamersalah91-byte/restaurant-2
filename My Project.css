@@ -1585,7 +1585,7 @@ footer h1 {
     }
 
     .body_gallery article img {
-        height: 190px;
+        height: auto;
     }
 
 
