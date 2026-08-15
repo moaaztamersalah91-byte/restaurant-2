@@ -1347,166 +1347,608 @@ nav ul li{
     }
 
 
-    /* ===== NAVBAR ===== */
+    //*==================================================
+              RESPONSIVE NAVBAR
+==================================================*/
 
-    nav {
-        width: 100%;
-        overflow: hidden;
-        white-space: nowrap;
+nav {
+    width: 100%;
+    background: #c62828;
+    overflow: hidden;
+}
+
+nav > ul {
+    width: 100%;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav > ul > li {
+    position: relative;
+    flex: 1 1 auto;
+    width: auto !important;
+    min-width: 0;
+}
+
+nav > ul > li > a {
+    display: block;
+    width: 100% !important;
+    padding: 18px 20px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 16px;
+}
+
+nav > ul > li > a:hover {
+    background: white;
+    color: #c62828;
+}
+
+
+/*==================================================
+              LANGUAGE BUTTON
+==================================================*/
+
+#languageBtn {
+    display: block;
+
+    margin: 8px auto;
+    padding: 9px 14px;
+
+    background: rgba(255,255,255,0.12);
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.7);
+    border-radius: 25px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+
+/*==================================================
+                DROPDOWN
+==================================================*/
+
+nav ul li ul {
+    position: absolute;
+
+    left: 0;
+    top: 100%;
+
+    width: 220px;
+
+    background: #c62828;
+
+    display: none;
+
+    flex-direction: column;
+
+    padding: 0;
+    margin: 0;
+
+    z-index: 9999;
+}
+
+nav ul li:hover > ul {
+    display: flex;
+}
+
+nav ul li ul li {
+    width: 100%;
+    flex: none;
+}
+
+nav ul li ul li a {
+    display: block;
+
+    width: 100% !important;
+
+    padding: 12px;
+
+    font-size: 14px;
+
+    text-align: left;
+
+    color: white;
+
+    text-decoration: none;
+}
+
+
+/*==================================================
+              RESPONSIVE DESIGN
+==================================================*/
+
+
+/*==================================================
+                    TABLET
+==================================================*/
+
+@media (max-width: 992px) {
+
+    /* ---------- HEADER ---------- */
+
+    header {
+        padding: 15px 3%;
     }
 
-    nav > ul {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-
-        width: 100% !important;
-        min-width: 0 !important;
-
-        justify-content: space-around;
-        align-items: center;
-
-        margin: 0;
-        padding: 0;
-
-        list-style: none;
+    #img_header {
+        width: 80px;
+        height: 80px;
     }
 
-    nav > ul > li {
-        display: flex !important;
-        width: auto !important;
-        flex: 1 1 auto;
-        flex-shrink: 1;
+    header #title {
+        font-size: 1.7rem;
     }
+
+
+    /* ---------- NAVBAR ---------- */
 
     nav > ul > li > a {
-        display: block;
-        width: 100% !important;
-
-        padding: 10px 5px;
-        font-size: 11px;
-
-        white-space: nowrap;
-        text-align: center;
+        padding: 12px 10px;
+        font-size: 13px;
     }
 
     #languageBtn {
         margin: 5px;
-        padding: 6px 9px;
-        font-size: 11px;
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+
+
+    /* ---------- HOME ---------- */
+
+    .body_home {
+        width: 94%;
+    }
+
+    #img_1 {
+        height: 400px;
+    }
+
+    #h2_1 {
+        font-size: 28px;
+    }
+
+
+    /* ---------- MENU ---------- */
+
+    .body_menu {
+        width: 94%;
+    }
+
+    .body_menu table,
+    .body_menu tr,
+    .body_menu td {
+
+        display: block;
+
+        width: 100%;
+    }
+
+    .body_menu td {
+        margin-bottom: 35px;
+    }
+
+
+    /* ---------- CHEFS ---------- */
+
+    .body_chefs {
+        width: 94%;
+    }
+
+    .body_chefs table,
+    .body_chefs tr,
+    .body_chefs td {
+
+        display: block;
+
+        width: 100%;
+    }
+
+    .body_chefs td {
+        margin-bottom: 35px;
+    }
+
+
+    /* ---------- GALLERY ---------- */
+
+    .body_gallery {
+        width: 94%;
+    }
+
+    .body_gallery table,
+    .body_gallery tr,
+    .body_gallery td {
+
+        display: block;
+
+        width: 100%;
+    }
+
+    .body_gallery td {
+        margin-bottom: 25px;
+    }
+
+
+    /* ---------- CONTACT ---------- */
+
+    .body_contact {
+        flex-direction: column;
+    }
+
+    #table,
+    #table_2 {
+        width: 100%;
+    }
+
+}
+
+
+/*==================================================
+                    MOBILE
+==================================================*/
+
+@media (max-width: 768px) {
+
+    /*==================================================
+                        HEADER
+    ==================================================*/
+
+    header {
+
+        width: 100%;
+
+        min-height: 90px;
+
+        padding: 10px 15px;
+
+        display: flex;
+
+        flex-direction: row !important;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        gap: 10px;
+    }
+
+    #img_header {
+
+        width: 55px;
+
+        height: 55px;
+
+        flex-shrink: 0;
+    }
+
+    header #title {
+
+        font-size: 18px;
+
+        margin: 0;
+
+        text-align: center;
+
+        line-height: 1.4;
+    }
+
+
+    /*==================================================
+                        NAVBAR
+    ==================================================*/
+
+    nav {
+
+        width: 100%;
+
+        background: #c62828;
+
+        overflow: hidden;
 
         white-space: nowrap;
     }
 
-    /* ===== RECIPES DROPDOWN ===== */
+    nav > ul {
+
+        width: 100% !important;
+
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        flex-wrap: nowrap !important;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        margin: 0;
+
+        padding: 0;
+
+        list-style: none;
+
+        overflow: hidden;
+    }
+
+    nav > ul > li {
+
+        width: auto !important;
+
+        min-width: 0;
+
+        flex: 1 1 0;
+
+        flex-shrink: 1;
+
+        display: flex !important;
+
+        justify-content: center;
+
+        align-items: center;
+    }
+
+    nav > ul > li > a {
+
+        display: block;
+
+        width: 100% !important;
+
+        padding: 10px 2px;
+
+        font-size: 10px;
+
+        color: white;
+
+        text-decoration: none;
+
+        text-align: center;
+
+        white-space: nowrap;
+
+        overflow: hidden;
+
+        text-overflow: clip;
+    }
+
+    nav > ul > li > a:hover {
+
+        background: white;
+
+        color: #c62828;
+    }
+
+
+    /*==================================================
+                    LANGUAGE BUTTON
+    ==================================================*/
+
+    #languageBtn {
+
+        display: block;
+
+        width: auto;
+
+        margin: 4px 2px;
+
+        padding: 6px 7px;
+
+        background: rgba(255,255,255,0.12);
+
+        color: white;
+
+        border: 1px solid rgba(255,255,255,0.7);
+
+        border-radius: 25px;
+
+        font-size: 10px;
+
+        font-weight: bold;
+
+        white-space: nowrap;
+
+        cursor: pointer;
+
+        flex-shrink: 1;
+    }
+
+
+    /*==================================================
+                    DROPDOWN
+    ==================================================*/
 
     nav ul li ul {
+
         position: absolute;
+
         top: 100%;
+
         left: 0;
 
-        width: 220px;
+        width: 180px;
+
+        background: #c62828;
 
         display: none;
+
         flex-direction: column;
+
+        margin: 0;
+
+        padding: 0;
+
+        z-index: 9999;
 
         white-space: normal;
     }
 
     nav ul li:hover > ul {
+
         display: flex;
     }
 
     nav ul li ul li {
+
         width: 100%;
+
         flex: none;
     }
 
     nav ul li ul li a {
+
+        display: block;
+
         width: 100% !important;
-        padding: 12px;
+
+        padding: 10px;
+
+        font-size: 11px;
+
+        text-align: left;
+
+        white-space: nowrap;
     }
 
 
-    /* ===== HOME ===== */
+    /*==================================================
+                        HOME
+    ==================================================*/
 
     .body_home {
+
         width: 94%;
+
         margin: 25px auto;
     }
 
     #img_1 {
+
+        width: 100%;
+
         height: 220px;
+
         border-radius: 12px;
     }
 
     #h2_1 {
+
         font-size: 20px;
+
         line-height: 1.5;
+
         margin-top: 18px;
     }
 
     #h1_1 {
+
         font-size: 15px;
     }
 
     .prev,
     .next {
+
         width: 42px;
+
         height: 42px;
+
         font-size: 20px;
+
         margin: 15px 5px;
     }
 
+    .body_home article img {
 
-    /* ===== MENU ===== */
+        height: 220px;
+    }
+
+    .body_home article p {
+
+        font-size: 16px;
+    }
+
+
+    /*==================================================
+                        MENU
+    ==================================================*/
 
     .body_menu {
+
         width: 94%;
+
         margin: 30px auto;
     }
 
     .body_menu article {
+
         margin-top: 20px;
     }
 
     .body_menu article img {
+
         height: 210px;
     }
 
     #name_title,
     #rating_title,
     #price_title {
+
         font-size: 17px;
     }
 
     #name,
     #rating,
     #price {
+
         font-size: 17px;
+
         margin-left: 5px;
     }
 
     #description {
+
         font-size: 15px;
+
         line-height: 1.7;
     }
 
     #order_now {
+
         width: 90%;
+
         padding: 12px;
+
         font-size: 16px;
     }
 
 
-    /* ===== CHEFS ===== */
+    /*==================================================
+                        CHEFS
+    ==================================================*/
 
     .body_chefs {
+
         width: 94%;
+
         margin: 30px auto;
     }
 
     .body_chefs article img {
+
         height: 240px;
     }
 
@@ -1514,94 +1956,147 @@ nav ul li{
     #experience_title,
     #Age,
     #experience {
+
         font-size: 17px;
     }
 
     .body_chefs #description {
+
         font-size: 15px;
+
         line-height: 1.7;
     }
 
 
-    /* ===== GALLERY ===== */
+    /*==================================================
+                        GALLERY
+    ==================================================*/
 
     .body_gallery {
+
         width: 94%;
+
         margin: 30px auto;
     }
 
     .body_gallery article img {
+
         height: 210px;
     }
 
 
-    /* ===== CONTACT ===== */
+    /*==================================================
+                        CONTACT
+    ==================================================*/
 
     .body_contact {
+
         width: 94%;
+
         margin: 30px auto;
+
         gap: 25px;
+
+        display: block;
     }
 
     #table,
     #table_2 {
+
         width: 100%;
+
         padding: 22px;
+
         border-radius: 15px;
+
+        box-sizing: border-box;
+
+        margin-bottom: 25px;
     }
 
     #title h1,
     #title_2 h1 {
+
         font-size: 23px;
+
         line-height: 1.4;
     }
 
     #table h2,
     #table_2 h2 {
+
         font-size: 18px;
     }
 
     #table input,
     #table_2 input {
+
+        width: 100%;
+
         padding: 13px;
+
         font-size: 15px;
+
+        box-sizing: border-box;
     }
 
     #text_message {
+
         height: 120px;
     }
 
     #send_message {
+
         font-size: 16px;
+
         padding: 13px;
     }
 
 
-    /* ===== RECIPE ===== */
+    /*==================================================
+                    RECIPE PAGE
+    ==================================================*/
 
     .body_crispy_Chicken {
+
         width: 94%;
+
         padding: 20px;
+
         margin: 30px auto;
+
         border-radius: 15px;
+
+        box-sizing: border-box;
     }
 
     .body_crispy_Chicken #title {
+
         font-size: 28px;
+
         line-height: 1.4;
+
         margin-bottom: 20px;
     }
 
     .body_crispy_Chicken img {
+
+        width: 100%;
+
         height: 230px;
+
         border-radius: 15px;
+
+        object-fit: cover;
     }
 
     .body_crispy_Chicken #About,
     .body_crispy_Chicken #ingredients,
     .body_crispy_Chicken #Preparation_Steps,
     .body_crispy_Chicken #Recipe_Information {
+
         font-size: 21px;
+
         line-height: 1.4;
     }
 
@@ -1610,281 +2105,207 @@ nav ul li{
     .body_crispy_Chicken #p_Preparation_Steps,
     .body_crispy_Chicken #p_Recipe_Information,
     .body_crispy_Chicken #p_2_Recipe_Information {
+
         font-size: 15px;
+
         line-height: 1.8;
     }
 
     .body_crispy_Chicken ul,
     .body_crispy_Chicken ol {
+
         margin-left: 20px;
+
         margin-right: 20px;
+
         padding-left: 15px;
     }
 
     .body_crispy_Chicken li {
+
         margin-bottom: 10px;
+
         line-height: 1.7;
     }
 
 
-    /* ===== RESERVATION ===== */
+    /*==================================================
+                    RESERVATION
+    ==================================================*/
 
     .reservation {
+
         width: 90%;
+
         max-width: 500px;
+
         margin: 30px auto;
+
         padding: 22px;
+
+        box-sizing: border-box;
     }
 
     .reservation h1 {
+
         font-size: 27px;
+
         line-height: 1.4;
     }
 
     .reservation p {
+
         font-size: 15px;
+
         line-height: 1.8;
     }
 
     .reservation label {
+
         font-size: 16px;
     }
 
     .reservation input {
+
         width: 100%;
+
         padding: 12px;
+
         font-size: 15px;
+
+        box-sizing: border-box;
     }
 
     .reservation button {
+
         width: 100%;
+
         padding: 13px;
+
         font-size: 17px;
     }
 
 
-    /* ===== FOOTER ===== */
+    /*==================================================
+                        FOOTER
+    ==================================================*/
 
     footer {
+
+        width: 100%;
+
         padding: 20px 15px;
+
+        box-sizing: border-box;
     }
 
     footer h1 {
+
         font-size: 20px;
+
         line-height: 1.5;
     }
 
 }
 
 
-/* ---------- Very Small Phones ---------- */
+/*==================================================
+                  VERY SMALL PHONES
+==================================================*/
 
 @media (max-width: 480px) {
 
-    header #title {
-        font-size: 19px;
+    header {
+
+        padding: 10px;
     }
 
     #img_header {
-        width: 60px;
-        height: 60px;
+
+        width: 50px;
+
+        height: 50px;
     }
 
-    nav ul li a {
-        font-size: 11px;
-        padding: 10px 5px;
+    header #title {
+
+        font-size: 16px;
     }
+
+
+    /* ---------- NAVBAR ---------- */
+
+    nav > ul > li > a {
+
+        padding: 9px 1px;
+
+        font-size: 8px;
+    }
+
+    #languageBtn {
+
+        margin: 3px 1px;
+
+        padding: 5px;
+
+        font-size: 8px;
+    }
+
+
+    /* ---------- HOME ---------- */
 
     .body_home,
     .body_menu,
     .body_chefs,
     .body_gallery,
     .body_contact {
+
         width: 95%;
     }
 
     #img_1 {
+
         height: 190px;
     }
 
     #h2_1 {
+
         font-size: 18px;
     }
 
+
+    /* ---------- RECIPE ---------- */
+
     .body_crispy_Chicken {
+
         width: 95%;
+
         padding: 15px;
     }
 
     .body_crispy_Chicken img {
+
         height: 190px;
     }
 
     .body_crispy_Chicken #title {
+
         font-size: 24px;
     }
 
+
+    /* ---------- RESERVATION ---------- */
+
     .reservation {
+
         width: 94%;
+
         padding: 18px;
     }
 
     .reservation h1 {
+
         font-size: 24px;
-    }
-
-}
-/* ==========================================
-        MOBILE - SAME STYLE AS MENU
-========================================== */
-
-@media (max-width: 768px) {
-
-    /* ===== PAGE WIDTH ===== */
-
-    .body_home,
-    .body_menu,
-    .body_chefs,
-    .body_gallery,
-    .body_contact,
-    .reservation,
-    .body_crispy_Chicken {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-
-    /* ===== HEADER ===== */
-
-    header {
-        width: 100%;
-        min-height: 90px;
-        padding: 10px 15px;
-        box-sizing: border-box;
-
-        display: flex;
-        flex-direction: row !important;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    #img_header {
-        width: 55px;
-        height: 55px;
-    }
-
-    header #title {
-        font-size: 18px;
-        margin: 0;
-        text-align: center;
-    }
-
-
-    /* ===== NAVBAR ===== */
-
-    nav {
-        width: 100%;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-
-    nav > ul {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-
-        width: max-content !important;
-        min-width: 100%;
-
-        justify-content: flex-start;
-        align-items: center;
-    }
-
-    nav > ul > li {
-        width: auto !important;
-        flex-shrink: 0;
-    }
-
-    nav > ul > li > a {
-        width: auto !important;
-        padding: 10px 12px;
-        font-size: 13px;
-        white-space: nowrap;
-    }
-
-    #languageBtn {
-        margin: 5px 8px;
-        padding: 7px 14px;
-        font-size: 13px;
-        white-space: nowrap;
-    }
-
-
-    /* ===== HOME ===== */
-
-    .body_home {
-        margin-top: 35px;
-    }
-
-    #img_1 {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-    }
-
-    #h2_1 {
-        font-size: 18px;
-        line-height: 1.5;
-    }
-
-
-    /* ===== CONTACT ===== */
-
-    .body_contact {
-        display: block;
-    }
-
-    #table,
-    #table_2 {
-        width: 100%;
-        box-sizing: border-box;
-        margin-bottom: 25px;
-    }
-
-
-    /* ===== RESERVATION ===== */
-
-    .reservation {
-        box-sizing: border-box;
-        margin-top: 35px;
-        padding: 20px;
-    }
-
-    .reservation input {
-        box-sizing: border-box;
-        width: 100%;
-    }
-
-
-    /* ===== RECIPE PAGES ===== */
-
-    .body_crispy_Chicken {
-        box-sizing: border-box;
-    }
-
-    .body_crispy_Chicken img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-    }
-
-
-    /* ===== FOOTER ===== */
-
-    footer {
-        width: 100%;
-        box-sizing: border-box;
     }
 
 }
