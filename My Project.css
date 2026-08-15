@@ -1697,3 +1697,42 @@ nav ul li ul{
     }
 
 }
+/* =========================
+   MOBILE NAVBAR - HORIZONTAL
+========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    nav > ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: max-content;
+        min-width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    nav > ul > li {
+        display: inline-flex;
+        flex-shrink: 0;
+    }
+
+    nav > ul > li > a {
+        display: block;
+        padding: 12px 14px;
+        font-size: 15px;
+        white-space: nowrap;
+    }
+
+    #languageBtn {
+        margin: 6px 8px;
+        white-space: nowrap;
+    }
+
+}
