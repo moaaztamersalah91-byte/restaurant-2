@@ -1736,3 +1736,32 @@ nav ul li ul{
     }
 
 }
+@media (max-width: 768px) {
+
+    nav > ul {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: flex-start;
+        align-items: center;
+        width: max-content !important;
+        min-width: 100%;
+    }
+
+    nav > ul > li {
+        display: inline-flex !important;
+        flex-shrink: 0;
+        width: auto !important;
+    }
+
+    nav > ul > li > a {
+        white-space: nowrap;
+        width: auto !important;
+    }
+
+    nav {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+}
