@@ -1316,3 +1316,384 @@ nav ul li ul{
 #languageBtn:active {
     transform: scale(0.95);
 }
+
+/*==================================================
+            MOBILE RESPONSIVE UPGRADE
+==================================================*/
+
+/* ---------- Tablets ---------- */
+
+@media (max-width: 992px) {
+
+    header {
+        padding: 15px 3%;
+    }
+
+    header #title {
+        font-size: 1.7rem;
+    }
+
+    #img_header {
+        width: 80px;
+        height: 80px;
+    }
+
+    .body_home,
+    .body_menu,
+    .body_chefs,
+    .body_gallery,
+    .body_contact {
+        width: 94%;
+    }
+
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 768px) {
+
+    /* ===== HEADER ===== */
+
+    header {
+        min-height: auto;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    #img_header {
+        width: 70px;
+        height: 70px;
+    }
+
+    header #title {
+        font-size: 22px;
+        line-height: 1.4;
+    }
+
+
+    /* ===== NAVBAR ===== */
+
+    nav ul {
+        width: 100%;
+    }
+
+    nav ul li a {
+        padding: 13px 10px;
+        font-size: 16px;
+    }
+
+    #languageBtn {
+        margin: 8px auto;
+        display: block;
+        font-size: 15px;
+        padding: 8px 16px;
+    }
+
+
+    /* ===== HOME ===== */
+
+    .body_home {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    #img_1 {
+        height: 220px;
+        border-radius: 12px;
+    }
+
+    #h2_1 {
+        font-size: 20px;
+        line-height: 1.5;
+        margin-top: 18px;
+    }
+
+    #h1_1 {
+        font-size: 15px;
+    }
+
+    .prev,
+    .next {
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
+        margin: 15px 5px;
+    }
+
+
+    /* ===== MENU ===== */
+
+    .body_menu {
+        width: 94%;
+        margin: 30px auto;
+    }
+
+    .body_menu article {
+        margin-top: 20px;
+    }
+
+    .body_menu article img {
+        height: 210px;
+    }
+
+    #name_title,
+    #rating_title,
+    #price_title {
+        font-size: 17px;
+    }
+
+    #name,
+    #rating,
+    #price {
+        font-size: 17px;
+        margin-left: 5px;
+    }
+
+    #description {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    #order_now {
+        width: 90%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+
+    /* ===== CHEFS ===== */
+
+    .body_chefs {
+        width: 94%;
+        margin: 30px auto;
+    }
+
+    .body_chefs article img {
+        height: 240px;
+    }
+
+    #Age_title,
+    #experience_title,
+    #Age,
+    #experience {
+        font-size: 17px;
+    }
+
+    .body_chefs #description {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+
+    /* ===== GALLERY ===== */
+
+    .body_gallery {
+        width: 94%;
+        margin: 30px auto;
+    }
+
+    .body_gallery article img {
+        height: 210px;
+    }
+
+
+    /* ===== CONTACT ===== */
+
+    .body_contact {
+        width: 94%;
+        margin: 30px auto;
+        gap: 25px;
+    }
+
+    #table,
+    #table_2 {
+        width: 100%;
+        padding: 22px;
+        border-radius: 15px;
+    }
+
+    #title h1,
+    #title_2 h1 {
+        font-size: 23px;
+        line-height: 1.4;
+    }
+
+    #table h2,
+    #table_2 h2 {
+        font-size: 18px;
+    }
+
+    #table input,
+    #table_2 input {
+        padding: 13px;
+        font-size: 15px;
+    }
+
+    #text_message {
+        height: 120px;
+    }
+
+    #send_message {
+        font-size: 16px;
+        padding: 13px;
+    }
+
+
+    /* ===== RECIPE ===== */
+
+    .body_crispy_Chicken {
+        width: 94%;
+        padding: 20px;
+        margin: 30px auto;
+        border-radius: 15px;
+    }
+
+    .body_crispy_Chicken #title {
+        font-size: 28px;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+
+    .body_crispy_Chicken img {
+        height: 230px;
+        border-radius: 15px;
+    }
+
+    .body_crispy_Chicken #About,
+    .body_crispy_Chicken #ingredients,
+    .body_crispy_Chicken #Preparation_Steps,
+    .body_crispy_Chicken #Recipe_Information {
+        font-size: 21px;
+        line-height: 1.4;
+    }
+
+    .body_crispy_Chicken #p_about,
+    .body_crispy_Chicken #p_ingredients,
+    .body_crispy_Chicken #p_Preparation_Steps,
+    .body_crispy_Chicken #p_Recipe_Information,
+    .body_crispy_Chicken #p_2_Recipe_Information {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .body_crispy_Chicken ul,
+    .body_crispy_Chicken ol {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-left: 15px;
+    }
+
+    .body_crispy_Chicken li {
+        margin-bottom: 10px;
+        line-height: 1.7;
+    }
+
+
+    /* ===== RESERVATION ===== */
+
+    .reservation {
+        width: 90%;
+        max-width: 500px;
+        margin: 30px auto;
+        padding: 22px;
+    }
+
+    .reservation h1 {
+        font-size: 27px;
+        line-height: 1.4;
+    }
+
+    .reservation p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .reservation label {
+        font-size: 16px;
+    }
+
+    .reservation input {
+        width: 100%;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .reservation button {
+        width: 100%;
+        padding: 13px;
+        font-size: 17px;
+    }
+
+
+    /* ===== FOOTER ===== */
+
+    footer {
+        padding: 20px 15px;
+    }
+
+    footer h1 {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+}
+
+
+/* ---------- Very Small Phones ---------- */
+
+@media (max-width: 480px) {
+
+    header #title {
+        font-size: 19px;
+    }
+
+    #img_header {
+        width: 60px;
+        height: 60px;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+        padding: 12px 8px;
+    }
+
+    .body_home,
+    .body_menu,
+    .body_chefs,
+    .body_gallery,
+    .body_contact {
+        width: 95%;
+    }
+
+    #img_1 {
+        height: 190px;
+    }
+
+    #h2_1 {
+        font-size: 18px;
+    }
+
+    .body_crispy_Chicken {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .body_crispy_Chicken img {
+        height: 190px;
+    }
+
+    .body_crispy_Chicken #title {
+        font-size: 24px;
+    }
+
+    .reservation {
+        width: 94%;
+        padding: 18px;
+    }
+
+    .reservation h1 {
+        font-size: 24px;
+    }
+
+}
