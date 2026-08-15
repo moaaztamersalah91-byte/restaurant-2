@@ -2,1439 +2,131 @@
                 GLOBAL SETTINGS
 ==================================================*/
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    background:#f5f5f5;
-    color:#333;
-    overflow-x:hidden;
+body {
+    background: #f5f5f5;
+    color: #333;
+    overflow-x: hidden;
 }
+
 
 /*==================================================
                     HEADER
 ==================================================*/
 
-header{
+header {
+    width: 100%;
+    min-height: 120px;
+    background: #222;
 
-    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    min-height:120px;
-
-    background:#222;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:15px 5%;
-
+    padding: 15px 5%;
 }
 
-#img_header{
+#img_header {
+    width: 90px;
+    height: 90px;
 
-    width:90px;
+    border-radius: 50%;
+    object-fit: cover;
 
-    height:90px;
-
-    border-radius:50%;
-
-    object-fit:cover;
-
+    flex-shrink: 0;
 }
 
-header #title{
+header #title {
+    color: white;
+    font-size: 2rem;
 
-    color:white;
+    text-align: center;
 
-    font-size:2rem;
+    flex: 1;
+    font-weight: bold;
 
-    text-align:center;
-
-    flex:1;
-
-    font-weight:bold;
-
+    margin: 0 20px;
 }
+
 
 /*==================================================
                     NAVBAR
 ==================================================*/
 
-nav{
-
-    width:100%;
-
-    background:#c62828;
-
-    position:sticky;
-
-    top:0;
-
-    z-index:1000;
-
-}
-
-nav ul{
-
-    display:flex;
-
-    justify-content:center;
-
-    list-style:none;
-
-}
-
-nav ul li{
-
-    position:relative;
-
-}
-
-nav ul li a{
-
-    display:block;
-
-    padding:18px 30px;
-
-    text-decoration:none;
-
-    color:white;
-
-    font-size:18px;
-
-    transition:.3s;
-
-}
-
-nav ul li a:hover{
-
-    background:white;
-
-    color:#c62828;
-
-}
-
-/*================ DROPDOWN =================*/
-
-nav ul li ul{
-
-    position:absolute;
-
-    left:0;
-
-    top:100%;
-
-    width:240px;
-
-    background:#c62828;
-
-    display:none;
-
-    flex-direction:column;
-
-}
-
-nav ul li:hover ul{
-
-    display:flex;
-
-}
-
-nav ul li ul li{
-
-    width:100%;
-
-}
-
-nav ul li ul li a{
-
-    padding:15px;
-
-    border-bottom:1px solid rgba(255,255,255,.2);
-
-}
-
-/*==================================================
-                    FOOTER
-==================================================*/
-
-footer{
-
-    width:100%;
-
-    background:#222;
-
-    color:white;
-
-    text-align:center;
-
-    padding:25px;
-
-    margin-top:50px;
-
-}
-
-footer h1{
-
-    font-size:1.5rem;
-
-    font-weight:normal;
-
-}
-/*==========================================
-            HOME PAGE
-==========================================*/
-
-.body_home{
-
-    width:90%;
-
-    margin:40px auto;
-
-}
-
-/*========== Slider ==========*/
-
-#img_1{
-
-    width:100%;
-
-    height:550px;
-
-    object-fit:cover;
-
-    border-radius:15px;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.3);
-
-}
-
-#h2_1{
-
-    text-align:center;
-
-    margin-top:25px;
-
-    font-size:35px;
-
-    color:#c62828;
-
-}
-
-#h1_1{
-
-    text-align:center;
-
-    margin-top:10px;
-
-    color:#666;
-
-}
-
-/*========== Slider Buttons ==========*/
-
-.prev,
-.next{
-
-    width:60px;
-
-    height:60px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:#c62828;
-
-    color:white;
-
-    font-size:28px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-    margin:25px 10px;
-
-}
-
-.prev:hover,
-.next:hover{
-
-    background:#222;
-
-    transform:scale(1.1);
-
-}
-
-/*========== Cards ==========*/
-
-.body_home table{
-
-    width:100%;
-
-    border-spacing:30px;
-
-    margin-top:50px;
-
-}
-
-.body_home article{
-
-    background:white;
-
-    border-radius:15px;
-
-    overflow:hidden;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-
-    transition:0.3s;
-
-}
-
-.body_home article:hover{
-
-    transform:translateY(-30px);
-
-}
-
-.body_home article img{
-
-    width:100%;
-
-    height:250px;
-
-    object-fit:cover;
-
-}
-
-.body_home article p{
-
-    padding:20px;
-
-    font-size:18px;
-
-    line-height:1.8;
-
-    text-align:justify;
-
-}
-/*==========================================
-          HOME RESPONSIVE
-==========================================*/
-
-@media(max-width:992px){
-
-.body_home table,
-.body_home tr,
-.body_home td{
-
-    display:block;
-
-    width:100%;
-
-}
-
-.body_home td{
-
-    margin-bottom:30px;
-
-}
-
-#img_1{
-
-    height:400px;
-
-}
-
-#h2_1{
-
-    font-size:28px;
-
-}
-
-}
-
-@media(max-width:768px){
-
-header{
-
-    flex-direction:column;
-
-}
-
-header #title{
-
-    margin-top:15px;
-
-    font-size:28px;
-
-}
-
-nav ul{
-
-    flex-direction:column;
-
-}
-
-nav ul li{
-
-    width:100%;
-
-}
-}
-
-.prev,
-.next{
-
-    width:45px;
-
-    height:45px;
-
-    font-size:22px;
-
-}
-
-.body_home article img{
-
-    height:220px;
-
-}
-
-.body_home article p{
-
-    font-size:16px;
-
-}
-
-}
-/*==========================================
-                MENU PAGE
-==========================================*/
-
-.body_menu{
-
-    width:90%;
-
-    margin:50px auto;
-
-}
-
-.body_menu table{
-
-    width:100%;
-
-    border-spacing:30px;
-
-}
-
-.body_menu article{
-
-    margin-top: 30px;
-
-    background:white;
-
-    border-radius:18px;
-
-    overflow:hidden;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-
-    transition: 0.3s;
-
-    text-align:center;
-
-}
-
-.body_menu article:hover{
-
-    transform:translateY(-30px);
-
-    box-shadow:0 15px 30px rgba(0,0,0,.25);
-
-}
-
-.body_menu article img{
-
-    width:100%;
-
-    height:240px;
-
-    object-fit:cover;
-
-}
-
-#name_title,
-#rating_title,
-#price_title{
-
-    display:inline-block;
-
-    color:#c62828;
-
-    margin-top:15px;
-
-    font-size:22px;
-
-}
-
-#name,
-#rating,
-#price{
-
-    display:inline-block;
-
-    color:#333;
-
-    font-size:22px;
-
-    margin-left:8px;
-
-}
-
-#description{
-
-    width:90%;
-
-    margin:20px auto;
-
-    line-height:1.7;
-
-    font-size:17px;
-
-    color:#555;
-
-}
-
-#order_now{
-
-    margin:20px 0 30px;
-
-    padding:14px 35px;
-
-    background:#c62828;
-
-    color:white;
-
-    border:none;
-
-    border-radius:8px;
-
-    font-size:18px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-#order_now:hover{
-
-    background:#222;
-
-    transform:scale(1.05);
-
-}
-/*==========================================
-            MENU RESPONSIVE
-==========================================*/
-
-@media(max-width:992px){
-
-.body_menu table,
-.body_menu tr,
-.body_menu td{
-
-    display:block;
-
-    width:100%;
-
-}
-
-.body_menu td{
-
-    margin-bottom:35px;
-
-}
-
-}
-
-@media(max-width:768px){
-
-.body_menu article img{
-
-    height:220px;
-
-}
-
-#name_title,
-#rating_title,
-#price_title{
-
-    font-size:18px;
-
-}
-
-#name,
-#rating,
-#price{
-
-    font-size:18px;
-
-}
-
-#description{
-
-    font-size:15px;
-
-}
-
-#order_now{
-
-    width:85%;
-
-}
-
-}
-/*==========================================
-                CHEFS PAGE
-==========================================*/
-
-.body_chefs{
-
-    width:90%;
-
-    margin:50px auto;
-
-}
-
-.body_chefs table{
-
-    width:100%;
-
-    border-spacing:30px;
-
-}
-
-.body_chefs article{
-
-    margin-top: 30px;
-
-    background:white;
-
-    border-radius:18px;
-
-    overflow:hidden;
-
-    text-align:center;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-
-    transition:0.3s;
-
-}
-
-.body_chefs article:hover{
-
-    transform:translateY(-30px);
-
-    box-shadow:0 15px 30px rgba(0,0,0,.25);
-
-}
-
-.body_chefs article img{
-
-    width:100%;
-
-    height:320px;
-
-    object-fit:cover;
-
-}
-
-#Age_title,
-#experience_title{
-
-    display:inline-block;
-
-    color:#c62828;
-
-    margin-top:12px;
-
-    font-size:21px;
-
-}
-
-#Age,
-#experience{
-
-    display:inline-block;
-
-    margin-left:8px;
-
-    color:#444;
-
-    font-size:21px;
-
-}
-
-.body_chefs #description{
-
-    width:90%;
-
-    margin:20px auto;
-
-    line-height:1.8;
-
-    color:#555;
-
-    font-size:17px;
-
-}
-/*==========================================
-            CHEFS RESPONSIVE
-==========================================*/
-
-@media(max-width:992px){
-
-.body_chefs table,
-.body_chefs tr,
-.body_chefs td{
-
-    display:block;
-
-    width:100%;
-
-}
-
-.body_chefs td{
-
-    margin-bottom:35px;
-
-}
-
-}
-
-@media(max-width:768px){
-
-.body_chefs article img{
-
-    height:260px;
-
-}
-
-#Age_title,
-#experience_title{
-
-    font-size:18px;
-
-}
-
-#Age,
-#experience{
-
-    font-size:18px;
-
-}
-
-.body_chefs #description{
-
-    font-size:15px;
-
-}
-
-}
-/*==========================================
-                GALLERY PAGE
-==========================================*/
-
-.body_gallery{
-
-    width:90%;
-
-    margin:50px auto;
-
-}
-
-.body_gallery table{
-
-    width:100%;
-
-    border-spacing:20px;
-
-}
-
-.body_gallery article{
-
-    overflow:hidden;
-
-    border-radius:15px;
-
-    background:white;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-
-}
-
-.body_gallery article img{
-
-    width:100%;
-
-    height:250px;
-
-    object-fit:cover;
-
-    cursor:pointer;
-
-    transition:.5s;
-
-}
-
-.body_gallery article img:hover{
-
-    transform:scale(1.12);
-
-}
-/*==========================================
-            GALLERY RESPONSIVE
-==========================================*/
-
-@media(max-width:992px){
-
-.body_gallery table,
-.body_gallery tr,
-.body_gallery td{
-
-    display:block;
-
-    width:100%;
-
-}
-
-.body_gallery td{
-
-    margin-bottom:25px;
-
-}
-
-}
-
-@media(max-width:768px){
-
-.body_gallery article img{
-
-    height:220px;
-
-}
-
-}
-/*==========================================
-                CONTACT PAGE
-==========================================*/
-
-.body_contact{
-
-    width:90%;
-
-    margin:50px auto;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    gap:40px;
-
-    align-items:flex-start;
-
-}
-
-#table,
-#table_2{
-
-    width:48%;
-
-    background:white;
-
-    border-radius:20px;
-
-    padding:35px;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-
-}
-
-#title h1,
-#title_2 h1{
-
-    text-align:center;
-
-    margin-bottom:10px;
-
-    color:#c62828;
-
-}
-
-#table h2,
-#table_2 h2{
-
-    margin-top:20px;
-
-    color:#333;
-
-}
-
-#table input,
-#table_2 input{
-
-    width:100%;
-
-    padding:15px;
-
-    margin-top:10px;
-
-    border:1px solid #ccc;
-
-    border-radius:8px;
-
-    font-size:16px;
-
-    transition:.3s;
-
-}
-
-#table_2 input:focus{
-
-    outline:none;
-
-    border-color:#c62828;
-
-    box-shadow:0 0 10px rgba(198,40,40,.25);
-
-}
-
-#text_message{
-
-    height:140px;
-
-}
-
-#div_opening{
-
-    margin-top:20px;
-
-    line-height:2;
-
-    font-size:18px;
-
-    color:#444;
-
-}
-
-#send_message{
-
-    width:100%;
-
-    margin-top:25px;
-
-    padding:15px;
-
-    border:none;
-
-    background:#c62828;
-
-    color:white;
-
-    border-radius:10px;
-
-    font-size:18px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-#send_message:hover{
-
-    background:#222;
-
-    transform:translateY(-3px);
-
-}
-/*==========================================
-            CONTACT RESPONSIVE
-==========================================*/
-
-@media(max-width:992px){
-
-.body_contact{
-
-    flex-direction:column;
-
-}
-
-#table,
-#table_2{
-
-    width:100%;
-
-}
-
-}
-
-@media(max-width:768px){
-
-#table,
-#table_2{
-
-    padding:25px;
-
-}
-
-#title h1,
-#title_2 h1{
-
-    font-size:26px;
-
-}
-
-#table h2,
-#table_2 h2{
-
-    font-size:20px;
-
-}
-
-#table input,
-#table_2 input{
-
-    font-size:15px;
-
-}
-
-}
-/*==========================================
-        CRISPY CHICKEN PAGE
-==========================================*/
-
-.body_crispy_Chicken{
-
-    width:80%;
-
-    margin:50px auto;
-
-    background:white;
-
-    padding:40px;
-
-    border-radius:20px;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-
-}
-
-.body_crispy_Chicken #title{
-
-    text-align:center;
-
-    color:#c62828;
-
-    font-size:40px;
-
-    margin-bottom:30px;
-
-}
-
-.body_crispy_Chicken img{
-
-    width:100%;
-
-    height:500px;
-
-    object-fit:cover;
-
-    border-radius:20px;
-
-    margin-bottom:30px;
-
-}
-
-.body_crispy_Chicken #About,
-.body_crispy_Chicken #ingredients,
-.body_crispy_Chicken #Preparation_Steps,
-.body_crispy_Chicken #Recipe_Information{
-
-    color:#c62828;
-
-    margin-top:35px;
-
-    margin-bottom:20px;
-
-}
-
-.body_crispy_Chicken #p_about{
-
-    font-size:18px;
-
-    line-height:1.9;
-
-    color:#555;
-
-}
-
-.body_crispy_Chicken ul,
-.body_crispy_Chicken ol{
-
-    margin-left:35px;
-
-}
-
-.body_crispy_Chicken li{
-
-    margin-bottom:12px;
-
-}
-
-.body_crispy_Chicken #p_ingredients,
-.body_crispy_Chicken #p_Preparation_Steps{
-
-    font-size:17px;
-
-    color:#444;
-
-}
-
-.body_crispy_Chicken #p_Recipe_Information,
-.body_crispy_Chicken #p_2_Recipe_Information{
-
-    font-size:18px;
-
-    color:#444;
-
-    margin-top:10px;
-
-}
-@media(max-width:768px){
-
-.body_crispy_Chicken{
-
-    width:95%;
-
-    padding:20px;
-
-}
-
-.body_crispy_Chicken #title{
-
-    font-size:30px;
-
-}
-
-.body_crispy_Chicken img{
-
-    height:260px;
-
-}
-
-.body_crispy_Chicken #p_about{
-
-    font-size:16px;
-
-}
-
-.body_crispy_Chicken #p_ingredients,
-.body_crispy_Chicken #p_Preparation_Steps{
-
-    font-size:15px;
-
-}
-
-}
-/* =========================
-   Reservation Page
-========================= */
-
-.reservation {
-    width: 500px;
-    margin: 50px auto;
-    padding: 30px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-.reservation h1 {
-    margin-bottom: 10px;
-    font-size: 35px;
-}
-
-.reservation p {
-    margin-bottom: 25px;
-    font-size: 18px;
-}
-
-.reservation form {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
-.reservation label {
-    margin-bottom: 7px;
-    font-size: 17px;
-    font-weight: bold;
-}
-
-.reservation input {
-    padding: 12px;
-    margin-bottom: 18px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-}
-
-.reservation input:focus {
-    outline: none;
-    border: 2px solid #d4af37;
-}
-
-.reservation button {
-    padding: 13px;
-    border: none;
-    border-radius: 8px;
-    background-color: #d4af37;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.reservation button:hover {
-    background-color: #b8941f;
-}
-/* =========================
-   Reservation Responsive
-========================= */
-
-@media (max-width: 768px) {
-
-    .reservation {
-        width: 80%;
-        margin: 30px auto;
-        padding: 25px;
-    }
-
-    .reservation h1 {
-        font-size: 30px;
-    }
-
-    .reservation p {
-        font-size: 16px;
-    }
-
-    .reservation input {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .reservation button {
-        width: 100%;
-    }
-
-}
-/*================ LANGUAGE BUTTON =================*/
-
-/*================ LANGUAGE BUTTON =================*/
-
-#languageBtn {
-    margin: 8px 20px;
-    padding: 10px 18px;
-
-    background: rgba(255, 255, 255, 0.12);
-    color: white;
-
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    border-radius: 25px;
-
-    font-size: 16px;
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition: 0.3s ease;
-
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-}
-
-#languageBtn:hover {
-    background: white;
-    color: #c62828;
-
-    transform: translateY(-2px);
-
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
-}
-
-#languageBtn:active {
-    transform: scale(0.95);
-}
-
-/*==================================================
-            MOBILE RESPONSIVE UPGRADE
-==================================================*/
-
-/* ---------- Tablets ---------- */
-
-@media (max-width: 992px) {
-
-    header {
-        padding: 15px 3%;
-    }
-
-    header #title {
-        font-size: 1.7rem;
-    }
-
-    #img_header {
-        width: 80px;
-        height: 80px;
-    }
-
-    .body_home,
-    .body_menu,
-    .body_chefs,
-    .body_gallery,
-    .body_contact {
-        width: 94%;
-    }
-
-}
-
-
-/* ---------- Mobile ---------- */
-
-@media (max-width: 768px) {
-
-    /* ===== HEADER ===== */
-
-    header {
-        min-height: auto;
-        padding: 15px;
-        gap: 10px;
-    }
-
-    #img_header {
-        width: 70px;
-        height: 70px;
-    }
-
-    header #title {
-        font-size: 22px;
-        line-height: 1.4;
-    }
-
-
-    //*==================================================
-              RESPONSIVE NAVBAR
-==================================================*/
-
 nav {
     width: 100%;
     background: #c62828;
-    overflow: hidden;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
 }
 
 nav > ul {
-    width: 100%;
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
+    display: flex;
     justify-content: center;
     align-items: center;
+
+    list-style: none;
+
     margin: 0;
     padding: 0;
-    list-style: none;
 }
 
-nav > ul > li {
+nav ul li {
     position: relative;
-    flex: 1 1 auto;
-    width: auto !important;
-    min-width: 0;
 }
 
-nav > ul > li > a {
+nav ul li a {
     display: block;
-    width: 100% !important;
-    padding: 18px 20px;
-    color: white;
+
+    padding: 18px 30px;
+
     text-decoration: none;
-    text-align: center;
+    color: white;
+
+    font-size: 18px;
+
+    transition: .3s;
+
     white-space: nowrap;
-    font-size: 16px;
 }
 
-nav > ul > li > a:hover {
+nav ul li a:hover {
     background: white;
     color: #c62828;
 }
 
 
 /*==================================================
-              LANGUAGE BUTTON
+                    DROPDOWN
 ==================================================*/
 
-#languageBtn {
-    display: block;
-
-    margin: 8px auto;
-    padding: 9px 14px;
-
-    background: rgba(255,255,255,0.12);
-    color: white;
-
-    border: 1px solid rgba(255,255,255,0.7);
-    border-radius: 25px;
-
-    font-size: 15px;
-    font-weight: bold;
-
-    cursor: pointer;
-
-    white-space: nowrap;
-}
-
-
-/*==================================================
-                DROPDOWN
-==================================================*/
-
-nav ul li ul {
+nav ul li > ul {
     position: absolute;
 
     left: 0;
     top: 100%;
 
-    width: 220px;
+    width: 240px;
 
     background: #c62828;
 
     display: none;
-
     flex-direction: column;
+
+    list-style: none;
 
     padding: 0;
     margin: 0;
@@ -1448,38 +140,721 @@ nav ul li:hover > ul {
 
 nav ul li ul li {
     width: 100%;
-    flex: none;
 }
 
 nav ul li ul li a {
-    display: block;
+    width: 100%;
 
-    width: 100% !important;
+    padding: 15px;
 
-    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
 
-    font-size: 14px;
-
-    text-align: left;
-
-    color: white;
-
-    text-decoration: none;
+    font-size: 16px;
 }
 
 
 /*==================================================
-              RESPONSIVE DESIGN
+                LANGUAGE BUTTON
 ==================================================*/
+
+#languageBtn {
+    margin: 8px 20px;
+
+    padding: 10px 18px;
+
+    background: rgba(255, 255, 255, .12);
+
+    color: white;
+
+    border: 1px solid rgba(255, 255, 255, .7);
+
+    border-radius: 25px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .15);
+
+    white-space: nowrap;
+}
+
+#languageBtn:hover {
+    background: white;
+    color: #c62828;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .25);
+}
+
+#languageBtn:active {
+    transform: scale(.95);
+}
 
 
 /*==================================================
-                    TABLET
+                    FOOTER
+==================================================*/
+
+footer {
+    width: 100%;
+
+    background: #222;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 50px;
+}
+
+footer h1 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+
+/*==================================================
+                    HOME PAGE
+==================================================*/
+
+.body_home {
+    width: 90%;
+    margin: 40px auto;
+}
+
+
+/*========== Slider ==========*/
+
+#img_1 {
+    width: 100%;
+    height: 550px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .3);
+}
+
+#h2_1 {
+    text-align: center;
+
+    margin-top: 25px;
+
+    font-size: 35px;
+
+    color: #c62828;
+}
+
+#h1_1 {
+    text-align: center;
+
+    margin-top: 10px;
+
+    color: #666;
+}
+
+
+/*========== Slider Buttons ==========*/
+
+.prev,
+.next {
+    width: 60px;
+    height: 60px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #c62828;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    margin: 25px 10px;
+}
+
+.prev:hover,
+.next:hover {
+    background: #222;
+    transform: scale(1.1);
+}
+
+
+/*========== Home Cards ==========*/
+
+.body_home table {
+    width: 100%;
+
+    border-spacing: 30px;
+
+    margin-top: 50px;
+}
+
+.body_home article {
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+
+    transition: .3s;
+}
+
+.body_home article:hover {
+    transform: translateY(-30px);
+}
+
+.body_home article img {
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+}
+
+.body_home article p {
+    padding: 20px;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    text-align: justify;
+}
+
+
+/*==================================================
+                    MENU PAGE
+==================================================*/
+
+.body_menu {
+    width: 90%;
+    margin: 50px auto;
+}
+
+.body_menu table {
+    width: 100%;
+    border-spacing: 30px;
+}
+
+.body_menu article {
+    margin-top: 30px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+
+    transition: .3s;
+
+    text-align: center;
+}
+
+.body_menu article:hover {
+    transform: translateY(-30px);
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .25);
+}
+
+.body_menu article img {
+    width: 100%;
+    height: 240px;
+
+    object-fit: cover;
+}
+
+#name_title,
+#rating_title,
+#price_title {
+    display: inline-block;
+
+    color: #c62828;
+
+    margin-top: 15px;
+
+    font-size: 22px;
+}
+
+#name,
+#rating,
+#price {
+    display: inline-block;
+
+    color: #333;
+
+    font-size: 22px;
+
+    margin-left: 8px;
+}
+
+#description {
+    width: 90%;
+
+    margin: 20px auto;
+
+    line-height: 1.7;
+
+    font-size: 17px;
+
+    color: #555;
+}
+
+#order_now {
+    margin: 20px 0 30px;
+
+    padding: 14px 35px;
+
+    background: #c62828;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+#order_now:hover {
+    background: #222;
+    transform: scale(1.05);
+}
+
+
+/*==================================================
+                    CHEFS PAGE
+==================================================*/
+
+.body_chefs {
+    width: 90%;
+    margin: 50px auto;
+}
+
+.body_chefs table {
+    width: 100%;
+    border-spacing: 30px;
+}
+
+.body_chefs article {
+    margin-top: 30px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+
+    transition: .3s;
+}
+
+.body_chefs article:hover {
+    transform: translateY(-30px);
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .25);
+}
+
+.body_chefs article img {
+    width: 100%;
+    height: 320px;
+
+    object-fit: cover;
+}
+
+#Age_title,
+#experience_title {
+    display: inline-block;
+
+    color: #c62828;
+
+    margin-top: 12px;
+
+    font-size: 21px;
+}
+
+#Age,
+#experience {
+    display: inline-block;
+
+    margin-left: 8px;
+
+    color: #444;
+
+    font-size: 21px;
+}
+
+.body_chefs #description {
+    width: 90%;
+
+    margin: 20px auto;
+
+    line-height: 1.8;
+
+    color: #555;
+
+    font-size: 17px;
+}
+
+
+/*==================================================
+                    GALLERY PAGE
+==================================================*/
+
+.body_gallery {
+    width: 90%;
+    margin: 50px auto;
+}
+
+.body_gallery table {
+    width: 100%;
+    border-spacing: 20px;
+}
+
+.body_gallery article {
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    background: white;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+}
+
+.body_gallery article img {
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+
+    cursor: pointer;
+
+    transition: .5s;
+}
+
+.body_gallery article img:hover {
+    transform: scale(1.12);
+}
+
+
+/*==================================================
+                    CONTACT PAGE
+==================================================*/
+
+.body_contact {
+    width: 90%;
+
+    margin: 50px auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    align-items: flex-start;
+}
+
+#table,
+#table_2 {
+    width: 48%;
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+}
+
+#title h1,
+#title_2 h1 {
+    text-align: center;
+
+    margin-bottom: 10px;
+
+    color: #c62828;
+}
+
+#table h2,
+#table_2 h2 {
+    margin-top: 20px;
+
+    color: #333;
+}
+
+#table input,
+#table_2 input {
+    width: 100%;
+
+    padding: 15px;
+
+    margin-top: 10px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    transition: .3s;
+}
+
+#table_2 input:focus {
+    outline: none;
+
+    border-color: #c62828;
+
+    box-shadow: 0 0 10px rgba(198, 40, 40, .25);
+}
+
+#text_message {
+    height: 140px;
+}
+
+#div_opening {
+    margin-top: 20px;
+
+    line-height: 2;
+
+    font-size: 18px;
+
+    color: #444;
+}
+
+#send_message {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border: none;
+
+    background: #c62828;
+
+    color: white;
+
+    border-radius: 10px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+#send_message:hover {
+    background: #222;
+
+    transform: translateY(-3px);
+}
+
+
+/*==================================================
+                CRISPY CHICKEN PAGE
+==================================================*/
+
+.body_crispy_Chicken {
+    width: 80%;
+
+    margin: 50px auto;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+}
+
+.body_crispy_Chicken #title {
+    text-align: center;
+
+    color: #c62828;
+
+    font-size: 40px;
+
+    margin-bottom: 30px;
+}
+
+.body_crispy_Chicken img {
+    width: 100%;
+
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    margin-bottom: 30px;
+}
+
+.body_crispy_Chicken #About,
+.body_crispy_Chicken #ingredients,
+.body_crispy_Chicken #Preparation_Steps,
+.body_crispy_Chicken #Recipe_Information {
+    color: #c62828;
+
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+.body_crispy_Chicken #p_about {
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    color: #555;
+}
+
+.body_crispy_Chicken ul,
+.body_crispy_Chicken ol {
+    margin-left: 35px;
+}
+
+.body_crispy_Chicken li {
+    margin-bottom: 12px;
+}
+
+.body_crispy_Chicken #p_ingredients,
+.body_crispy_Chicken #p_Preparation_Steps {
+    font-size: 17px;
+
+    color: #444;
+}
+
+.body_crispy_Chicken #p_Recipe_Information,
+.body_crispy_Chicken #p_2_Recipe_Information {
+    font-size: 18px;
+
+    color: #444;
+
+    margin-top: 10px;
+}
+
+
+/*==================================================
+                RESERVATION PAGE
+==================================================*/
+
+.reservation {
+    width: 500px;
+
+    margin: 50px auto;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+
+    text-align: center;
+}
+
+.reservation h1 {
+    margin-bottom: 10px;
+
+    font-size: 35px;
+}
+
+.reservation p {
+    margin-bottom: 25px;
+
+    font-size: 18px;
+}
+
+.reservation form {
+    display: flex;
+
+    flex-direction: column;
+
+    text-align: left;
+}
+
+.reservation label {
+    margin-bottom: 7px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+}
+
+.reservation input {
+    padding: 12px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+.reservation input:focus {
+    outline: none;
+
+    border: 2px solid #d4af37;
+}
+
+.reservation button {
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #d4af37;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.reservation button:hover {
+    background-color: #b8941f;
+}
+
+
+/*==================================================
+                TABLET
 ==================================================*/
 
 @media (max-width: 992px) {
 
-    /* ---------- HEADER ---------- */
+    /* HEADER */
 
     header {
         padding: 15px 3%;
@@ -1495,21 +870,23 @@ nav ul li ul li a {
     }
 
 
-    /* ---------- NAVBAR ---------- */
+    /* NAVBAR */
 
-    nav > ul > li > a {
-        padding: 12px 10px;
-        font-size: 13px;
+    nav ul li a {
+        padding: 14px 12px;
+        font-size: 14px;
     }
 
     #languageBtn {
         margin: 5px;
+
         padding: 7px 10px;
+
         font-size: 12px;
     }
 
 
-    /* ---------- HOME ---------- */
+    /* HOME */
 
     .body_home {
         width: 94%;
@@ -1524,67 +901,62 @@ nav ul li ul li a {
     }
 
 
-    /* ---------- MENU ---------- */
+    /* TABLE CARDS */
+
+    .body_home table,
+    .body_home tbody,
+    .body_home tr,
+    .body_home td,
+
+    .body_menu table,
+    .body_menu tbody,
+    .body_menu tr,
+    .body_menu td,
+
+    .body_chefs table,
+    .body_chefs tbody,
+    .body_chefs tr,
+    .body_chefs td,
+
+    .body_gallery table,
+    .body_gallery tbody,
+    .body_gallery tr,
+    .body_gallery td {
+        display: block;
+
+        width: 100%;
+    }
+
+    .body_home td,
+    .body_menu td,
+    .body_chefs td,
+    .body_gallery td {
+        margin-bottom: 35px;
+    }
+
+
+    /* MENU */
 
     .body_menu {
         width: 94%;
     }
 
-    .body_menu table,
-    .body_menu tr,
-    .body_menu td {
 
-        display: block;
-
-        width: 100%;
-    }
-
-    .body_menu td {
-        margin-bottom: 35px;
-    }
-
-
-    /* ---------- CHEFS ---------- */
+    /* CHEFS */
 
     .body_chefs {
         width: 94%;
     }
 
-    .body_chefs table,
-    .body_chefs tr,
-    .body_chefs td {
 
-        display: block;
-
-        width: 100%;
-    }
-
-    .body_chefs td {
-        margin-bottom: 35px;
-    }
-
-
-    /* ---------- GALLERY ---------- */
+    /* GALLERY */
 
     .body_gallery {
         width: 94%;
     }
 
-    .body_gallery table,
-    .body_gallery tr,
-    .body_gallery td {
 
-        display: block;
-
-        width: 100%;
-    }
-
-    .body_gallery td {
-        margin-bottom: 25px;
-    }
-
-
-    /* ---------- CONTACT ---------- */
+    /* CONTACT */
 
     .body_contact {
         flex-direction: column;
@@ -1593,6 +965,13 @@ nav ul li ul li a {
     #table,
     #table_2 {
         width: 100%;
+    }
+
+
+    /* RECIPE */
+
+    .body_crispy_Chicken {
+        width: 90%;
     }
 
 }
@@ -1609,42 +988,38 @@ nav ul li ul li a {
     ==================================================*/
 
     header {
-
         width: 100%;
 
-        min-height: 90px;
+        min-height: 85px;
 
-        padding: 10px 15px;
+        padding: 10px 12px;
 
         display: flex;
 
-        flex-direction: row !important;
+        flex-direction: row;
 
         justify-content: space-between;
 
         align-items: center;
 
-        gap: 10px;
+        gap: 8px;
     }
 
     #img_header {
-
         width: 55px;
-
         height: 55px;
 
         flex-shrink: 0;
     }
 
     header #title {
-
         font-size: 18px;
 
-        margin: 0;
+        line-height: 1.4;
 
         text-align: center;
 
-        line-height: 1.4;
+        margin: 0;
     }
 
 
@@ -1653,118 +1028,82 @@ nav ul li ul li a {
     ==================================================*/
 
     nav {
-
         width: 100%;
 
-        background: #c62828;
-
-        overflow: hidden;
+        overflow-x: auto;
+        overflow-y: visible;
 
         white-space: nowrap;
+
+        scrollbar-width: none;
+    }
+
+    nav::-webkit-scrollbar {
+        display: none;
     }
 
     nav > ul {
+        width: max-content;
 
-        width: 100% !important;
+        min-width: 100%;
 
-        display: flex !important;
+        display: flex;
 
-        flex-direction: row !important;
+        flex-direction: row;
 
-        flex-wrap: nowrap !important;
-
-        justify-content: space-between;
-
-        align-items: center;
-
-        margin: 0;
-
-        padding: 0;
-
-        list-style: none;
-
-        overflow: hidden;
-    }
-
-    nav > ul > li {
-
-        width: auto !important;
-
-        min-width: 0;
-
-        flex: 1 1 0;
-
-        flex-shrink: 1;
-
-        display: flex !important;
+        flex-wrap: nowrap;
 
         justify-content: center;
 
         align-items: center;
+
+        list-style: none;
+
+        padding: 0;
+        margin: 0;
+    }
+
+    nav > ul > li {
+        width: auto;
+
+        flex: 0 0 auto;
+
+        position: relative;
     }
 
     nav > ul > li > a {
+        width: auto;
 
         display: block;
 
-        width: 100% !important;
+        padding: 11px 10px;
 
-        padding: 10px 2px;
-
-        font-size: 10px;
-
-        color: white;
-
-        text-decoration: none;
+        font-size: 12px;
 
         text-align: center;
 
         white-space: nowrap;
-
-        overflow: hidden;
-
-        text-overflow: clip;
-    }
-
-    nav > ul > li > a:hover {
-
-        background: white;
-
-        color: #c62828;
     }
 
 
-    /*==================================================
-                    LANGUAGE BUTTON
-    ==================================================*/
+    /* LANGUAGE BUTTON */
+
+    nav > ul > li:first-child {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+    }
 
     #languageBtn {
+        margin: 4px 5px;
 
-        display: block;
+        padding: 6px 9px;
 
-        width: auto;
-
-        margin: 4px 2px;
-
-        padding: 6px 7px;
-
-        background: rgba(255,255,255,0.12);
-
-        color: white;
-
-        border: 1px solid rgba(255,255,255,0.7);
-
-        border-radius: 25px;
-
-        font-size: 10px;
-
-        font-weight: bold;
+        font-size: 11px;
 
         white-space: nowrap;
-
-        cursor: pointer;
-
-        flex-shrink: 1;
     }
 
 
@@ -1772,52 +1111,42 @@ nav ul li ul li a {
                     DROPDOWN
     ==================================================*/
 
-    nav ul li ul {
-
+    nav ul li > ul {
         position: absolute;
 
         top: 100%;
-
         left: 0;
 
-        width: 180px;
-
-        background: #c62828;
+        width: 190px;
 
         display: none;
 
         flex-direction: column;
 
-        margin: 0;
+        background: #c62828;
 
         padding: 0;
+        margin: 0;
 
         z-index: 9999;
-
-        white-space: normal;
     }
 
     nav ul li:hover > ul {
-
         display: flex;
     }
 
     nav ul li ul li {
-
         width: 100%;
 
         flex: none;
     }
 
     nav ul li ul li a {
+        width: 100%;
 
-        display: block;
+        padding: 11px 12px;
 
-        width: 100% !important;
-
-        padding: 10px;
-
-        font-size: 11px;
+        font-size: 12px;
 
         text-align: left;
 
@@ -1830,14 +1159,12 @@ nav ul li ul li a {
     ==================================================*/
 
     .body_home {
-
         width: 94%;
 
         margin: 25px auto;
     }
 
     #img_1 {
-
         width: 100%;
 
         height: 220px;
@@ -1846,7 +1173,6 @@ nav ul li ul li a {
     }
 
     #h2_1 {
-
         font-size: 20px;
 
         line-height: 1.5;
@@ -1855,15 +1181,12 @@ nav ul li ul li a {
     }
 
     #h1_1 {
-
         font-size: 15px;
     }
 
     .prev,
     .next {
-
         width: 42px;
-
         height: 42px;
 
         font-size: 20px;
@@ -1872,13 +1195,15 @@ nav ul li ul li a {
     }
 
     .body_home article img {
-
         height: 220px;
     }
 
     .body_home article p {
-
         font-size: 16px;
+
+        line-height: 1.8;
+
+        padding: 18px;
     }
 
 
@@ -1887,47 +1212,40 @@ nav ul li ul li a {
     ==================================================*/
 
     .body_menu {
-
         width: 94%;
 
         margin: 30px auto;
     }
 
     .body_menu article {
-
         margin-top: 20px;
     }
 
     .body_menu article img {
-
         height: 210px;
     }
 
     #name_title,
     #rating_title,
     #price_title {
-
         font-size: 17px;
     }
 
     #name,
     #rating,
     #price {
-
         font-size: 17px;
 
         margin-left: 5px;
     }
 
     #description {
-
         font-size: 15px;
 
         line-height: 1.7;
     }
 
     #order_now {
-
         width: 90%;
 
         padding: 12px;
@@ -1941,14 +1259,12 @@ nav ul li ul li a {
     ==================================================*/
 
     .body_chefs {
-
         width: 94%;
 
         margin: 30px auto;
     }
 
     .body_chefs article img {
-
         height: 240px;
     }
 
@@ -1956,12 +1272,10 @@ nav ul li ul li a {
     #experience_title,
     #Age,
     #experience {
-
         font-size: 17px;
     }
 
     .body_chefs #description {
-
         font-size: 15px;
 
         line-height: 1.7;
@@ -1973,14 +1287,12 @@ nav ul li ul li a {
     ==================================================*/
 
     .body_gallery {
-
         width: 94%;
 
         margin: 30px auto;
     }
 
     .body_gallery article img {
-
         height: 210px;
     }
 
@@ -1990,33 +1302,26 @@ nav ul li ul li a {
     ==================================================*/
 
     .body_contact {
-
         width: 94%;
 
         margin: 30px auto;
-
-        gap: 25px;
 
         display: block;
     }
 
     #table,
     #table_2 {
-
         width: 100%;
 
         padding: 22px;
 
-        border-radius: 15px;
-
-        box-sizing: border-box;
-
         margin-bottom: 25px;
+
+        border-radius: 15px;
     }
 
     #title h1,
     #title_2 h1 {
-
         font-size: 23px;
 
         line-height: 1.4;
@@ -2024,29 +1329,23 @@ nav ul li ul li a {
 
     #table h2,
     #table_2 h2 {
-
         font-size: 18px;
     }
 
     #table input,
     #table_2 input {
-
         width: 100%;
 
         padding: 13px;
 
         font-size: 15px;
-
-        box-sizing: border-box;
     }
 
     #text_message {
-
         height: 120px;
     }
 
     #send_message {
-
         font-size: 16px;
 
         padding: 13px;
@@ -2058,7 +1357,6 @@ nav ul li ul li a {
     ==================================================*/
 
     .body_crispy_Chicken {
-
         width: 94%;
 
         padding: 20px;
@@ -2066,12 +1364,9 @@ nav ul li ul li a {
         margin: 30px auto;
 
         border-radius: 15px;
-
-        box-sizing: border-box;
     }
 
     .body_crispy_Chicken #title {
-
         font-size: 28px;
 
         line-height: 1.4;
@@ -2080,7 +1375,6 @@ nav ul li ul li a {
     }
 
     .body_crispy_Chicken img {
-
         width: 100%;
 
         height: 230px;
@@ -2094,7 +1388,6 @@ nav ul li ul li a {
     .body_crispy_Chicken #ingredients,
     .body_crispy_Chicken #Preparation_Steps,
     .body_crispy_Chicken #Recipe_Information {
-
         font-size: 21px;
 
         line-height: 1.4;
@@ -2105,7 +1398,6 @@ nav ul li ul li a {
     .body_crispy_Chicken #p_Preparation_Steps,
     .body_crispy_Chicken #p_Recipe_Information,
     .body_crispy_Chicken #p_2_Recipe_Information {
-
         font-size: 15px;
 
         line-height: 1.8;
@@ -2113,7 +1405,6 @@ nav ul li ul li a {
 
     .body_crispy_Chicken ul,
     .body_crispy_Chicken ol {
-
         margin-left: 20px;
 
         margin-right: 20px;
@@ -2122,7 +1413,6 @@ nav ul li ul li a {
     }
 
     .body_crispy_Chicken li {
-
         margin-bottom: 10px;
 
         line-height: 1.7;
@@ -2134,7 +1424,6 @@ nav ul li ul li a {
     ==================================================*/
 
     .reservation {
-
         width: 90%;
 
         max-width: 500px;
@@ -2147,37 +1436,30 @@ nav ul li ul li a {
     }
 
     .reservation h1 {
-
         font-size: 27px;
 
         line-height: 1.4;
     }
 
     .reservation p {
-
         font-size: 15px;
 
         line-height: 1.8;
     }
 
     .reservation label {
-
         font-size: 16px;
     }
 
     .reservation input {
-
         width: 100%;
 
         padding: 12px;
 
         font-size: 15px;
-
-        box-sizing: border-box;
     }
 
     .reservation button {
-
         width: 100%;
 
         padding: 13px;
@@ -2191,121 +1473,243 @@ nav ul li ul li a {
     ==================================================*/
 
     footer {
-
         width: 100%;
 
         padding: 20px 15px;
 
-        box-sizing: border-box;
+        margin-top: 40px;
     }
 
     footer h1 {
-
         font-size: 20px;
 
         line-height: 1.5;
     }
-
 }
 
 
 /*==================================================
-                  VERY SMALL PHONES
+                VERY SMALL PHONES
 ==================================================*/
 
 @media (max-width: 480px) {
 
-    header {
+    /* HEADER */
 
-        padding: 10px;
+    header {
+        padding: 9px 8px;
+
+        gap: 6px;
     }
 
     #img_header {
-
-        width: 50px;
-
-        height: 50px;
+        width: 48px;
+        height: 48px;
     }
 
     header #title {
+        font-size: 15px;
 
-        font-size: 16px;
+        line-height: 1.3;
+
+        margin: 0 5px;
     }
 
 
-    /* ---------- NAVBAR ---------- */
+    /* NAVBAR */
+
+    nav > ul {
+        justify-content: flex-start;
+
+        min-width: max-content;
+    }
 
     nav > ul > li > a {
+        padding: 9px 8px;
 
-        padding: 9px 1px;
-
-        font-size: 8px;
+        font-size: 10px;
     }
 
     #languageBtn {
+        margin: 3px 4px;
 
-        margin: 3px 1px;
+        padding: 5px 7px;
 
-        padding: 5px;
-
-        font-size: 8px;
+        font-size: 9px;
     }
 
 
-    /* ---------- HOME ---------- */
+    /* DROPDOWN */
 
-    .body_home,
-    .body_menu,
-    .body_chefs,
-    .body_gallery,
-    .body_contact {
+    nav ul li > ul {
+        width: 175px;
+    }
 
+    nav ul li ul li a {
+        padding: 10px;
+
+        font-size: 11px;
+    }
+
+
+    /* HOME */
+
+    .body_home {
         width: 95%;
     }
 
     #img_1 {
-
         height: 190px;
     }
 
     #h2_1 {
+        font-size: 18px;
+
+        line-height: 1.5;
+    }
+
+    #h1_1 {
+        font-size: 14px;
+    }
+
+    .prev,
+    .next {
+        width: 38px;
+        height: 38px;
 
         font-size: 18px;
+
+        margin: 12px 4px;
     }
 
 
-    /* ---------- RECIPE ---------- */
+    /* MENU */
+
+    .body_menu {
+        width: 95%;
+    }
+
+    .body_menu article img {
+        height: 190px;
+    }
+
+    #name_title,
+    #rating_title,
+    #price_title,
+    #name,
+    #rating,
+    #price {
+        font-size: 15px;
+    }
+
+    #description {
+        font-size: 14px;
+    }
+
+
+    /* CHEFS */
+
+    .body_chefs {
+        width: 95%;
+    }
+
+    .body_chefs article img {
+        height: 200px;
+    }
+
+    #Age_title,
+    #experience_title,
+    #Age,
+    #experience {
+        font-size: 15px;
+    }
+
+    .body_chefs #description {
+        font-size: 14px;
+    }
+
+
+    /* GALLERY */
+
+    .body_gallery {
+        width: 95%;
+    }
+
+    .body_gallery article img {
+        height: 190px;
+    }
+
+
+    /* CONTACT */
+
+    .body_contact {
+        width: 95%;
+    }
+
+    #table,
+    #table_2 {
+        padding: 18px;
+    }
+
+    #title h1,
+    #title_2 h1 {
+        font-size: 21px;
+    }
+
+    #table h2,
+    #table_2 h2 {
+        font-size: 17px;
+    }
+
+
+    /* RECIPE */
 
     .body_crispy_Chicken {
-
         width: 95%;
 
         padding: 15px;
     }
 
-    .body_crispy_Chicken img {
-
-        height: 190px;
-    }
-
     .body_crispy_Chicken #title {
-
         font-size: 24px;
     }
 
+    .body_crispy_Chicken img {
+        height: 190px;
+    }
 
-    /* ---------- RESERVATION ---------- */
+    .body_crispy_Chicken #About,
+    .body_crispy_Chicken #ingredients,
+    .body_crispy_Chicken #Preparation_Steps,
+    .body_crispy_Chicken #Recipe_Information {
+        font-size: 19px;
+    }
+
+
+    /* RESERVATION */
 
     .reservation {
-
         width: 94%;
 
         padding: 18px;
     }
 
     .reservation h1 {
-
         font-size: 24px;
     }
 
+    .reservation p {
+        font-size: 14px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 18px 10px;
+    }
+
+    footer h1 {
+        font-size: 17px;
+    }
 }
